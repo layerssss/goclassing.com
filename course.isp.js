@@ -1,0 +1,220 @@
+///
+<reference path="/ISPReferences/course.isp.js" />
+/*<!--*/
+$load("master/cframe.master.js")({
+    head: function () {
+    /*--><script src="/js/jquery.textExt.min.js" type="text/javascript"></script><!--*/
+    },
+    title:c.title,
+    course:c,
+    body: function () {
+        /*-->
+<div class="navbar-fixed-top hidden-phone subnav" style="top: 40px;">
+    <div class="container">
+        <div class="container">
+            <ul class="breadcrumb nav clearfix">
+                <li class="admin" style="float: right;">
+                    <div>
+                        <a class="btn btn-info" data-toggle="button" href="#" onclick="$('.intro').fadeToggle();return false;">
+                            <i class="icon-edit icon-white"></i>Edit</a></div>
+                </li>
+                <!--*/if(!c.pub){/*-->
+                <li class="not admin" style="float: right;">
+                    <div>
+                        <a class="btn btn-success" href="/Course/Join?redirect=%20&id={$c.id$}"><i class="icon-plus-sign icon-white">
+                        </i>Join</a> <a class="btn btn-danger" href="/Course/Exit?redirect=%20&id={$c.id$}">
+                            <i class="icon-remove-sign icon-white"></i>Exit</a></div>
+                </li>
+                <!--*/}else{/*-->
+                <li class="not admin" style="float: right;">
+                    <div>
+                        <a class="btn btn-success disabled" href="#" onclick="return false;" title="This course is open for public.">
+                            <i class="icon-info-sign icon-white"></i>Public Course</a></div>
+                </li>
+                <!--*/}/*-->
+                <li style="float: right; margin: 0 10px;">
+                    <div>
+                        <div class="btn-group " title="font size" data-toggle="buttons-radio" style="float: right;">
+                            <button class="btn active" onclick="$('section').css('font-size',$(this).html())">
+                                small</button>
+                            <button class="btn " onclick="$('section').css('font-size',$(this).html())">
+                                medium</button>
+                            <button class="btn" onclick="$('section').css('font-size',$(this).html())">
+                                large</button>
+                        </div>
+                    </div>
+                </li>
+                <!--*/for(var i=0;i<chapters.length;i++){var ch=chapters[i];if(ch.title){/*-->
+                <li><a class="btn" href="#{$ch.safeTitle$}">{$ch.title$}</a></li>
+                <!--*/}}/*-->
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <!--*/if(!c.pub){/*-->
+    <a href="#" class="btn visible-phone" data-toggle="button" onclick="$(this).next().find('section').toggleClass('hidden-phone');return false;">
+        See members...</a>
+    <!--*/}/*-->
+    <div class="span2">
+        <section class="hidden-phone">
+        <h5>Teacher:</h5>
+        <!--*/
+        $load('inline/user.inline.js')({user:c.user});
+        /*-->
+        <hr />
+        <h5>Tags</h5>
+        <div class="tags">
+                        <!--*/for(var i=0;i<c.tag.length;i++){/*-->
+                        <a href="{$c.tag[i]$}.tag"><i class="icon-tag icon-grey"></i><em>{$c.tag[i]$}</em></a>
+                        <!--*/}/*-->
+                    </div>
+                    <hr />
+                    
+    <!--*/if(!c.pub){/*-->
+        <div class="admin">
+        <h5>New students:</h5>
+    <ul class="row thumbnails">
+        <!--*/for(var i =0;i<joinings.length;i++){/*-->
+        <li class="span2">
+        <div class="row-fluid">
+        <div class="span10"><!--*/
+        $load('inline/user.inline.js')({user:joinings[i]});/*--></div>
+        <div class="span2 admin"><a href="Course/Aproove?id={$urlEncode(c.id)$}&uid={$joinings[i].id$}&redirect=%20" class="btn btn-success btn-mini"><i class="icon-ok icon-white"></i></a>
+                    <a href="Course/Disaproove?id={$urlEncode(c.id)$}&uid={$joinings[i].id$}&redirect=%20" class="btn btn-danger btn-mini" style="margin-right:5px;"><i class="icon-remove icon-white"></i></a>
+                    </div>
+        </div>
+            
+        </li>
+        <!--*/
+} /*-->
+    </ul>
+        <hr /></div>
+        <h5>Students</h5>
+    <ul class="row thumbnails">
+        <!--*/for(var i =0;i<learnings.length;i++){var u=learnings[i];/*-->
+        <li class="span2"><div class="row-fluid">
+        <div class="span10"><!--*/
+        $load('inline/user.inline.js')({user:learnings[i]});/*--></div>
+        <div class="span2 admin">
+                    <a href="Course/Disaproove?id={$urlEncode(c.id)$}&uid={$learnings[i].id$}&redirect=%20" class="btn btn-danger btn-mini" style="margin-right:5px;"><i class="icon-remove icon-white"></i></a>
+                    </div>
+        </div></li>
+        <!--*/
+} /*-->
+    </ul>
+    <!--*/}/*-->
+        </section>
+    </div>
+    <a class="btn btn-info admin visible-phone" data-toggle="button" href="#" onclick="$('.intro').fadeToggle();return false;">
+        <i class="icon-edit icon-white"></i>Edit</a>
+    <!--*/if(!c.pub){/*-->
+    <a class="btn btn-success not admin visible-phone" href="/Course/Join?redirect=%20&id={$c.id$}">
+        <i class="icon-plus-sign icon-white"></i>Join</a> <a class="btn btn-danger not admin visible-phone"
+            href="/Course/Exit?redirect=%20&id={$c.id$}"><i class="icon-remove-sign icon-white">
+            </i>Exit</a>
+    <!--*/}else{/*-->
+    <a class="btn btn-success disabled not admin visible-phone" href="#" onclick="return false;"
+        title="This course is open for public."><i class="icon-info-sign icon-white"></i>
+        Public Course</a>
+    <!--*/}/*-->
+    <div class="btn-group visible-phone" title="font size" data-toggle="buttons-radio">
+        <button class="btn active" onclick="$('section').css('font-size',$(this).html())">
+            small</button>
+        <button class="btn " onclick="$('section').css('font-size',$(this).html())">
+            medium</button>
+        <button class="btn" onclick="$('section').css('font-size',$(this).html())">
+            large</button>
+    </div>
+    <section class="intro row" style="display: none;">
+    <form class="span10 form-horizontal" action="/Course/Edit?redirect=%20" enctype="multipart/form-data" 
+    method="post">
+    <fieldset>
+        <legend>Edit Course Info</legend>
+        <div class="control-group">
+            <label class="control-label" for="course-id">
+                ID:</label>
+            <div class="controls">
+                <input readonly="readonly" name="id" type="text" value="{$c.id$}" class="input-xlarge" id="course-id" />
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="course-title">
+                Title:</label>
+            <div class="controls">
+                <input type="text" value="{$c.title$}" name="title" class="input-xlarge" id="course-title" />
+            </div>
+        </div>
+        
+        <div class="control-group">
+            <label class="control-label" for="course-d">
+                Description:</label>
+            <div class="controls">
+                <textarea maxlength="10000" class="input-xlarge" id="course-d" rows="5" name="desc">{$c.desc$}</textarea>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="course-tags">
+                Tags:</label>
+            <div class="controls">
+                <input type="text" value="" name="tags" class="input-xlarge" id="course-tags" />
+                <script type="text/javascript">
+                    $('#course-tags').textext({
+                        plugins: 'tags  autocomplete ajax arrow prompt',
+                        prompt: 'Add one...',
+                        tagsItems :{$c.tagString$},
+                        ajax: {
+                            url: 'Course/GetAllTags',
+                            dataType: 'json',
+                            cacheResults: true
+                        }, autocomplete: {
+                            position: 'above'
+                        }
+                    });
+                    $('.text-position-below').css('top',24);
+                    </script>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="course-icon">
+                Icon:</label>
+            <div class="controls">
+                <input class="input-file" name="icon" id="course-icon" type="file" />
+                <p class="help-block">
+                    Image size: 50*50</p>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="textarea">
+                Home page content:</label>
+            <div class="controls">
+                <p class="help-block">
+                    Support tags:</p>
+                <pre>
+<!--*/$load('inline/contentHelper.inline.js')();/*--></pre>
+                <textarea wrap="soft" name="home" class="" maxlength="10000" style="width:95%;" id="textarea" rows="20">{$c.home$}</textarea>
+            </div>
+        </div>
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary">
+                Save (Ctrl + Enter)</button>
+            <button type="button" onclick="$('.btn-info:visible').trigger('click');" class="btn">
+                Cancel</button>
+        </div>
+    </fieldset>
+    </form></section>
+    <div class="span10 intro">
+        <!--*/for(var i=0;i<chapters.length;i++){var ch=chapters[i];/*-->
+        <section id="{$ch.safeTitle$}">
+        <!--*/if(ch.title){/*-->
+        <h2 class="page-header">{$ch.title$}</h2>
+        <!--*/}/*-->
+        {$ch.content$}
+        </section>
+        <!--*/}/*-->
+    </div>
+</div>
+<!--*/
+    }
+});
+//-->
