@@ -82,7 +82,7 @@ var act2 = (($cur == 'classroom.isp.js') ||
                         <li class="divider-vertical"></li>
                         <li class="{$act1$}" ><a href="{$c.id$}.course"><i class="icon-home icon-white"></i>Introduction</a></li>
                         <li class="{$act2$}"><a href="{$c.id$}.classroom"><i class="icon-book icon-white"></i><!--*/
-if (c.isOpen) { /*-->Plaza<!--*/ } else { /*-->Classroom<!--*/ } /*--></a></li>
+if (c.pub) { /*-->Plaza<!--*/ } else { /*-->Classroom<!--*/ } /*--></a></li>
                         <li class="divider-vertical"></li>
                         <li><a href="http://goclassing.com/"><span class="brand-gc-mini">Goclassing.com</span></a></li>
                     </ul>
