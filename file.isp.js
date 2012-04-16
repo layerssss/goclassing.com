@@ -116,6 +116,7 @@ $load("master/cframe.master.js")({
     </fieldset>
     </form></section>
     <div class="span12 intro">
+        <div class=" well">
         <section id="Title">
         <h1 class="page-header">
             {$c.title$}:{$f.title$}</h1>
@@ -134,6 +135,8 @@ $load("master/cframe.master.js")({
         </section>
         <!--*/
         } /*-->
+        
+        </div>
         <section id="Discussion">
         <h2 class="page-header">Discussion</h2>
         <!--*/

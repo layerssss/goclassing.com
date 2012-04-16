@@ -204,14 +204,16 @@ $load("master/cframe.master.js")({
     </fieldset>
     </form></section>
     <div class="span10 intro">
-        <!--*/for(var i=0;i<chapters.length;i++){var ch=chapters[i];/*-->
-        <section id="{$ch.safeTitle$}">
+        <div class=" well">
+            <!--*/for(var i=0;i<chapters.length;i++){var ch=chapters[i];/*-->
+            <section id="{$ch.safeTitle$}">
         <!--*/if(ch.title){/*-->
         <h2 class="page-header">{$ch.title$}</h2>
         <!--*/}/*-->
         {$ch.content$}
         </section>
-        <!--*/}/*-->
+            <!--*/}/*-->
+        </div>
     </div>
 </div>
 <!--*/
