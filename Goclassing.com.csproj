@@ -137,7 +137,6 @@
     <Content Include="js\jquery.masonry.min.js" />
     <Content Include="js\jquery.textExt.min.js" />
     <Content Include="OAuthFinished.htm" />
-    <Content Include="Pre.htm.isp.js" />
     <Content Include="tag.isp.js" />
     <Content Include="tags.isp.js" />
     <Content Include="UnexpectedError.isp.js" />
