@@ -60,6 +60,7 @@ $load('master/frame.master.js')({
             <h2>
                 Welcome to Goclassing</h2>
             <p>
+                Can we program with Github??<br/>
                 Goclassing is a place where you can:</p>
             <div>
                 <a href="#" class="btn btn-large btn-success create-course-btn">Create a course</a>
