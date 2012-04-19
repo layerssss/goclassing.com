@@ -1,3 +1,5 @@
+*.csproj
+*.config
 *.cs
 Goclassing.com.Publish.xml
 Web.config
