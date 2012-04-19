@@ -58,7 +58,7 @@ $load('master/frame.master.js')({
     <div class="span6">
         <div class="hero-unit">
             <h2>
-                Welcome to Goclassing</h2>
+                Welcome to Gocfdsfdsaflassing</h2>
             <p>
                 Goclassing is a place where you can:</p>
             <div>
