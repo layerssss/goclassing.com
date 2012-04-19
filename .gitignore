@@ -1,3 +1,5 @@
+*.cs
+Goclassing.com.Publish.xml
 Web.config
 .svn/
 *.classroom
