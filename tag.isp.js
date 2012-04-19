@@ -1,5 +1,4 @@
-﻿/// <reference path="/ISPReferences/tag.isp.js" />
-/*<!--*/
+﻿/*<!--*/
 $load('master/frame.master.js')({
     title: htmlEncode($subPage),
     head: function () {

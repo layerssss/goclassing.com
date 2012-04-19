@@ -1,5 +1,3 @@
-///
-<reference path="/ISPReferences/Default.htm.isp.js" />
 /*<!--*/
 $load('master/frame.master.js')({
     head: function () {

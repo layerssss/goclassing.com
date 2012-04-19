@@ -1,5 +1,3 @@
-///
-<reference path="/ISPReferences/course.isp.js" />
 /*<!--*/
 $load("master/cframe.master.js")({
     head: function () {

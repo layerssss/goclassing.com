@@ -1,4 +1,3 @@
-/// <reference path="/ISPReferences/inline/contentHelper.inline.js" />
 /*<!--*//*-->[t]:chapter title
 eg.  1.[t]Introduction[t]
 [l]:link

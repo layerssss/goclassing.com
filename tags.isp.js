@@ -1,5 +1,4 @@
-﻿/// <reference path="/ISPReferences/tags.isp.js" />
-/*<!--*/
+﻿/*<!--*/
 
 $load('master/frame.master.js')({
     title: 'Tags',

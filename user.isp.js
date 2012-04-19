@@ -1,4 +1,3 @@
-/// <reference path="/ISPReferences/user.isp.js" />
 /*<!--*/
 $load('master/frame.master.js')({
     title: u.name,

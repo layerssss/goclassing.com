@@ -1,4 +1,3 @@
-/// <reference path="/ISPReferences/Error.isp.js" />
 /*<!--*/
 $load('master/frame.master.js')({
     title: 'Oops',

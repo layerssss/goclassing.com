@@ -1,4 +1,3 @@
-/// <reference path="/ISPReferences/master/cframe.master.js" />
 /*<!--*/
 var c = arguments[0].course;
 /*--><!DOCTYPE html>

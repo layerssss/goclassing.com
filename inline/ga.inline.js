@@ -1,5 +1,4 @@
-﻿/// <reference path="/ISPReferences/inline/contentHelper.inline.js" />
-/*<!--*//*--><script type="text/javascript">
+﻿/*<!--*//*--><script type="text/javascript">
 
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30329778-1']);

@@ -1,4 +1,3 @@
-/// <reference path="/ISPReferences/inline/course.inline.js" />
 /*<!--*/
 var c = arguments[0].course;
 /*-->

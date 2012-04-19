@@ -1,5 +1,4 @@
-﻿/// <reference path="/ISPReferences/users.isp.js" />
-/*<!--*/
+﻿/*<!--*/
 $load('master/frame.master.js')({
     title: 'Users',
     head: function () {

@@ -1,5 +1,4 @@
-﻿/// <reference path="/ISPReferences/Pre.htm.isp.js" />
-/*<!--*/
+﻿/*<!--*/
 $load('master/frame.master.js')({
     title:"Oops...",
     head: function () {

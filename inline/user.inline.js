@@ -1,4 +1,3 @@
-/// <reference path="/ISPReferences/inline/user.inline.js" />
 /*<!--*/
 var u=arguments[0].user;
 /*-->

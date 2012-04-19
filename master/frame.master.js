@@ -1,4 +1,3 @@
-/// <reference path="/ISPReferences/master/frame.master.js" />
 /*<!--*/
 /*--><!DOCTYPE html>
 <html lang="en">
