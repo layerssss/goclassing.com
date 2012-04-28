@@ -59,7 +59,7 @@ var act2 = (($cur == 'users.isp.js') ||
                             </ul>
                         </li>
                         <li>
-                            <form class="navbar-search pull-left" action="/Search">
+                            <form class="navbar-search pull-left" action="/Course/Search">
                             <input type="text" class="search-query" name="input" placeholder="Search" />
                             </form>
                         </li>
