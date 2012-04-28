@@ -1,8 +1,16 @@
-/*<!--*//*-->[t]:chapter title
-eg.  1.[t]Introduction[t]
-[l]:link
-eg.  My website:[l]http://www.owesomewebsite.com/[l]
-[i]:image ( <a data-toggle="modal" href="#imgUploadingAdvice">Where can I upload images?</a> )
-eg.  My website:[i]http://goclassing.com/img/header-logo.png[i]
-<!--*/
+/*<!--*//*-->##Chapter1 : chapter title
+###Today's coursework : smaller title
+######here they are : smallest title
+============== : horizontal line
+[my blog](http://my.blog.net/) : link
+![It's me](http://my.blog.net/avatar,gif) : image
+_This will also be italic_ : italisized text
+__This will also be bold__ : bold text
+list:
+* Item 1
+* Item 2
+As Kanye West said(Blockquotes):
+
+> We're living the future so
+> the present is our past.<!--*/
 //-->

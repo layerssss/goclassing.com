@@ -28,11 +28,11 @@ $load("master/cframe.master.js")({
                 <li style="float: right; margin: 0 10px;">
                     <div>
                         <div class="btn-group " title="font size" data-toggle="buttons-radio" style="float: right;">
-                            <button class="btn active" onclick="$('section').css('font-size',$(this).html())">
+                            <button class="btn active" onclick="$('section>p').css('font-size',$(this).html())">
                                 small</button>
-                            <button class="btn " onclick="$('section').css('font-size',$(this).html())">
+                            <button class="btn " onclick="$('section>p').css('font-size',$(this).html())">
                                 medium</button>
-                            <button class="btn" onclick="$('section').css('font-size',$(this).html())">
+                            <button class="btn" onclick="$('section>p').css('font-size',$(this).html())">
                                 large</button>
                         </div>
                     </div>
@@ -61,11 +61,11 @@ $load("master/cframe.master.js")({
         <i class="icon-edit icon-white"></i>Edit</a>
         
     <div class="btn-group visible-phone" title="font size" data-toggle="buttons-radio">
-        <button class="btn active" onclick="$('section').css('font-size',$(this).html())">
+        <button class="btn active" onclick="$('section>p').css('font-size',$(this).html())">
             small</button>
-        <button class="btn " onclick="$('section').css('font-size',$(this).html())">
+        <button class="btn " onclick="$('section>p').css('font-size',$(this).html())">
             medium</button>
-        <button class="btn" onclick="$('section').css('font-size',$(this).html())">
+        <button class="btn" onclick="$('section>p').css('font-size',$(this).html())">
             large</button>
     </div>
     
@@ -164,7 +164,7 @@ $load("master/cframe.master.js")({
                 Content:</label>
             <div class="controls">
                 <p class="help-block">
-                    Support tags:</p>
+                    Support tags(<a href="/101.file" target="_blank">view all...</a>):</p>
                 <pre>
 <!--*/
         $load('inline/contentHelper.inline.js')(); /*--></pre>
