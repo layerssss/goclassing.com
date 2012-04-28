@@ -13,7 +13,7 @@ $load("master/cframe.master.js")({
             <ul class="breadcrumb nav clearfix">
                 <li class="admin" style="float: right;">
                     <div>
-                        <a class="btn btn-info" data-toggle="button" href="#" onclick="$('.intro').fadeToggle();return false;">
+                        <a class="btn btn-info" data-toggle="button" href="#" onclick="$('.intro').toggle();return false;">
                             <i class="icon-edit icon-white"></i>Edit</a></div>
                 </li>
                 <!--*/if(!c.pub){/*-->
@@ -104,7 +104,7 @@ $load("master/cframe.master.js")({
     <!--*/}/*-->
         </section>
     </div>
-    <a class="btn btn-info admin visible-phone" data-toggle="button" href="#" onclick="$('.intro').fadeToggle();return false;">
+    <a class="btn btn-info admin visible-phone" data-toggle="button" href="#" onclick="$('.intro').toggle();return false;">
         <i class="icon-edit icon-white"></i>Edit</a>
     <!--*/if(!c.pub){/*-->
     <a class="btn btn-success not admin visible-phone" href="/Course/Join?redirect=%20&id={$c.id$}">
@@ -124,6 +124,19 @@ $load("master/cframe.master.js")({
         <button class="btn" onclick="$('section').css('font-size',$(this).html())">
             large</button>
     </div>
+    <div class="span10 intro">
+        <div class=" well">
+            <!--*/for(var i=0;i<chapters.length;i++){var ch=chapters[i];/*-->
+            <section id="{$ch.safeTitle$}">
+        <!--*/if(ch.title){/*-->
+        <h2 class="page-header">{$ch.title$}</h2>
+        <!--*/}/*-->
+        {$ch.content$}
+        </section>
+            <!--*/}/*-->
+        </div>
+    </div>
+    
     <section class="intro row" style="display: none;">
     <form class="span10 form-horizontal" action="/Course/Edit?redirect=%20" enctype="multipart/form-data" 
     method="post">
@@ -201,18 +214,6 @@ $load("master/cframe.master.js")({
         </div>
     </fieldset>
     </form></section>
-    <div class="span10 intro">
-        <div class=" well">
-            <!--*/for(var i=0;i<chapters.length;i++){var ch=chapters[i];/*-->
-            <section id="{$ch.safeTitle$}">
-        <!--*/if(ch.title){/*-->
-        <h2 class="page-header">{$ch.title$}</h2>
-        <!--*/}/*-->
-        {$ch.content$}
-        </section>
-            <!--*/}/*-->
-        </div>
-    </div>
 </div>
 <!--*/
     }

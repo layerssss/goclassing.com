@@ -21,7 +21,7 @@ $load("master/cframe.master.js")({
                 <li class="divider-vertical"></li>
                 <li class="admin" style="float: right;">
                     <div>
-                        <a class="btn btn-info" data-toggle="button" href="#" onclick="$('.intro').fadeToggle();return false;">
+                        <a class="btn btn-info" data-toggle="button" href="#" onclick="$('.intro').toggle();return false;">
                             <i class="icon-edit icon-white"></i>Edit</a></div>
                 </li>
                 
@@ -57,7 +57,7 @@ $load("master/cframe.master.js")({
         <i class="icon-file icon-white"></i>Open '{$f.title$}.{$f.ext$}'</a>
     <!--*/
         } /*-->
-    <a class="btn btn-info admin visible-phone" data-toggle="button" href="#" onclick="$('.intro').fadeToggle();return false;">
+    <a class="btn btn-info admin visible-phone" data-toggle="button" href="#" onclick="$('.intro').toggle();return false;">
         <i class="icon-edit icon-white"></i>Edit</a>
         
     <div class="btn-group visible-phone" title="font size" data-toggle="buttons-radio">
@@ -68,51 +68,7 @@ $load("master/cframe.master.js")({
         <button class="btn" onclick="$('section').css('font-size',$(this).html())">
             large</button>
     </div>
-    <section class="intro span12" style="display: none;">
-    <form class="span10 form-horizontal" action="/Course/EditFile?redirect=%20&fid={$f.id$}" 
-    method="post" enctype="multipart/form-data">
-    <fieldset>
-        <legend>Edit File Info</legend>
-        <div class="control-group">
-            <label class="control-label" for="course-title">
-                Title:</label>
-            <div class="controls">
-                <input type="text" class="input-xlarge" id="course-title" name="title" value="{$f.title$}" />
-            </div>
-        </div>
-        <div class="control-group">
-  <label class="control-label" for="up-file">Attachment(optional):</label>
-            <div class="controls">
-  <input class="input-xlarge" id="up-file" type="file" class="" name="file" placeholder="select a file¡­" />
-        </div>
-        </div>
-        <div class="control-group">
-            <label class="control-label" for="course-d">
-                Description:</label>
-            <div class="controls">
-                <textarea maxlength="10000" class="input-xlarge" id="course-d" rows="5" name="desc">{$f.desc$}</textarea>
-            </div>
-        </div>
-        <div class="control-group">
-            <label class="control-label" for="textarea">
-                Content:</label>
-            <div class="controls">
-                <p class="help-block">
-                    Support tags:</p>
-                <pre>
-<!--*/
-        $load('inline/contentHelper.inline.js')(); /*--></pre>
-                <textarea name="content" wrap="soft" maxlength="10000" style="width:95%;" id="textarea" rows="20">{$f.content$}</textarea>
-            </div>
-        </div>
-        <div class="form-actions">
-            <button type="submit" class="btn btn-primary">
-                Save</button>
-            <button type="button" onclick="$('.btn-info:visible').trigger('click');" class="btn">
-                Cancel</button>
-        </div>
-    </fieldset>
-    </form></section>
+    
     <div class="span12 intro">
         <div class=" well">
         <section id="Title">
@@ -178,7 +134,51 @@ $load("master/cframe.master.js")({
 
         </div></div></div>
         </section>
-    </div>
+    </div><section class="intro span12" style="display: none;">
+    <form class="span10 form-horizontal" action="/Course/EditFile?redirect=%20&fid={$f.id$}" 
+    method="post" enctype="multipart/form-data">
+    <fieldset>
+        <legend>Edit File Info</legend>
+        <div class="control-group">
+            <label class="control-label" for="course-title">
+                Title:</label>
+            <div class="controls">
+                <input type="text" class="input-xlarge" id="course-title" name="title" value="{$f.title$}" />
+            </div>
+        </div>
+        <div class="control-group">
+  <label class="control-label" for="up-file">Attachment(optional):</label>
+            <div class="controls">
+  <input class="input-xlarge" id="up-file" type="file" class="" name="file" placeholder="select a file¡­" />
+        </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="course-d">
+                Description:</label>
+            <div class="controls">
+                <textarea maxlength="10000" class="input-xlarge" id="course-d" rows="5" name="desc">{$f.desc$}</textarea>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="textarea">
+                Content:</label>
+            <div class="controls">
+                <p class="help-block">
+                    Support tags:</p>
+                <pre>
+<!--*/
+        $load('inline/contentHelper.inline.js')(); /*--></pre>
+                <textarea name="content" wrap="soft" maxlength="10000" style="width:95%;" id="textarea" rows="20">{$f.content$}</textarea>
+            </div>
+        </div>
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary">
+                Save</button>
+            <button type="button" onclick="$('.btn-info:visible').trigger('click');" class="btn">
+                Cancel</button>
+        </div>
+    </fieldset>
+    </form></section>
 </div>
 <!--*/
     }
