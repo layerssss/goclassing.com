@@ -61,7 +61,7 @@ var act2 = (($cur == 'users.isp.js') ||
                         <li>
                             <form class="navbar-search pull-left" action="/Course/Search">
                             <input type="text" class="search-query" name="input" placeholder="Search" />
-                            <input type="hidden name="redirect" value="" />
+                            <input type="hidden" name="redirect" value="" />
                             </form>
                         </li>
                         <li class="divider-vertical"></li>
