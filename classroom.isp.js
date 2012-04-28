@@ -67,7 +67,7 @@ $load("master/cframe.master.js")({
                                         </i></a>
                             </div>
                             <div class="btn-group">
-                                <a href="Course/DeleteFile?redirect=%20&fid={$f.id$}" class="btn btn-danger btn-mini"
+                                <a href="Course/DeleteFile?redirect=%20&fid={$f.id$}" data-confirm="All data within this topic will be DELETED, are you sure?" class="btn btn-danger btn-mini"
                                     rel="tooltip" title="Delete"><i class="icon-trash icon-white"></i></a>
                             </div>
                         </div>
@@ -104,7 +104,8 @@ $load("master/cframe.master.js")({
                 </div>
                 <div class="btn-group">
                     <a href="Course/DeleteType?redirect=%20&tid={$tid$}" class="btn btn-danger btn-mini"
-                        rel="tooltip" title="Delete"><i class="icon-trash icon-white"></i></a><a href="#"
+                        rel="tooltip" data-confirm="All topics in this block will also be DELETED, are you sure?" title="Delete"><i class="icon-trash icon-white"></i></a>
+                        <a href="#"
                             onclick="$('.add').hide().insertAfter($(this).parent().parent()).fadeIn().find('#tid').val('{$tid$}');window.onresize();return false;"
                             class="btn btn-success btn-mini" rel="tooltip" title="Add a New Topic"><i class="icon-plus-sign icon-white">
                             </i></a>

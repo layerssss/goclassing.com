@@ -35,6 +35,7 @@ if (typeof (arguments[0].title) == 'string') {
     <script src="/js/fancyBox/helpers/jquery.fancybox-buttons.js" type="text/javascript"></script>
     <link href="/js/fancyBox/helpers/jquery.fancybox-thumbs.css" rel="stylesheet" type="text/css" />
     <script src="/js/fancyBox/jquery.mousewheel-3.0.6.pack.js" type="text/javascript"></script>
+    <script src="/js/scripts.js" type="text/javascript"></script>
     <script type="text/javascript">
 var teacherUsername="{$c.user.username$}";
     </script>

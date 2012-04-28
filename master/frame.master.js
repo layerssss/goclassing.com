@@ -27,6 +27,7 @@ if (typeof (arguments[0].title) == 'string') {
     <link rel="shortcut icon" href="/favicon.ico" />
     <link href="/css/StyleSheets.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>
+    <script src="/js/scripts.js" type="text/javascript"></script>
     <!--*/
 arguments[0].head(); /*-->
 </head>
