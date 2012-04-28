@@ -1,7 +1,11 @@
 /*<!--*/
 $load("master/cframe.master.js")({
     head: function () {
-    /*--><script src="/js/jquery.textExt.min.js" type="text/javascript"></script><!--*/
+    /*-->
+<script src="/js/jquery.textExt.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="/js/colorpicker.js"></script>
+<link href="/css/colorpicker.css" rel="stylesheet" type="text/css" />
+<!--*/
     },
     title:c.title,
     course:c,
@@ -156,6 +160,13 @@ $load("master/cframe.master.js")({
                </div>
         </div>
         <div class="control-group">
+            <label class="control-label" for="course-color">
+                Color:</label>
+            <div class="controls">
+                <input type="text" value="{$c.color$}" name="color" class="input-xlarge" id="course-color" />
+            </div>
+        </div>
+        <div class="control-group">
             <label class="control-label" for="course-title">
                 Title:</label>
             <div class="controls">
@@ -175,6 +186,9 @@ $load("master/cframe.master.js")({
                 Tags:</label>
             <div class="controls">
                 <input type="text" value="" name="tags" class="input-xlarge" id="course-tags" />
+            </div>
+        </div>
+        
                 <script type="text/javascript">
                     $('#course-tags').textext({
                         plugins: 'tags  autocomplete ajax arrow prompt',
@@ -188,10 +202,19 @@ $load("master/cframe.master.js")({
                             position: 'above'
                         }
                     });
+
+                   $('#course-color').ColorPicker({
+	onSubmit: function(hsb, hex, rgb, el) {
+		$(el).val(hex);
+        $(el).css('backgroundColor','#'+hex);
+		$(el).ColorPickerHide();
+	},
+	onBeforeShow: function () {
+		$(this).ColorPickerSetColor(this.value);
+	}
+}).css('backgroundColor','#'+$('#course-color').val());
                     $('.text-position-below').css('top',24);
                     </script>
-            </div>
-        </div>
         <div class="control-group">
             <label class="control-label" for="course-icon">
                 Icon:</label>

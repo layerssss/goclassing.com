@@ -3,7 +3,7 @@ var c = arguments[0].course;
 /*-->
 <div class="row-fluid">
                         <div class="span2">
-                            <a class="thumbnail" href="{$c.id$}.course" title="{$c.title$}">
+                            <a class="thumbnail" style="background-color:#{$c.color$};" href="{$c.id$}.course" title="{$c.title$}">
                                 <img src="{$c.img$}" style="width: 100%; max-width: 70px;" />
                             </a>
                         </div>

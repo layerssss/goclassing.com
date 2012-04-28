@@ -31,7 +31,7 @@ $load('master/frame.master.js')({
                 $('null');
             }
             /*-->
-            <li class="span1"><a class="thumbnail course" href="{$c.id$}.course" title="{$c.title$}">
+            <li class="span1"><a style="background-color:#{$c.color$};" class="thumbnail course" href="{$c.id$}.course" title="{$c.title$}">
                 <img src="{$c.img$}" style="width: 100%; max-width: 100px;" />
             </a>
                 <div class="des-course alert alert-info" style="display: none;">

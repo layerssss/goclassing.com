@@ -7,7 +7,7 @@ var c = arguments[0].course;
     <meta name="description" content="" />
     <meta name="author" content="" />
     <!-- Le styles -->
-    <link href="/css/bootstrap.css" rel="stylesheet" />
+    <link href="/css/{$c.color$}.mybootstrap.css" rel="stylesheet" />
     <style type="text/css">
         body
         {

@@ -13,4 +13,7 @@
         $('#myModal').modal();
         return false;
     });
+    if ($('.brand').css('color').substring(4, 7) != '255') {
+        $('.nav i').removeClass('icon-white');
+    }
 });
