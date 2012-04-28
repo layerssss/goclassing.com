@@ -31,6 +31,9 @@
 @purple:                #7a43b6;
 
 
+@themeColor: spin(@green,-40);
+
+
 // Scaffolding
 // -------------------------
 @bodyBackground:        @white;
@@ -39,17 +42,20 @@
 
 // Links
 // -------------------------
-@navbarBackground:      spin(@green,-40);
-@linkColor:             lighten(@navbarBackground,10%);
+@linkColor:             @themeColor;
 @linkColorHover:        darken(@linkColor, 15%);
 
 
 // Typography
 // -------------------------
+@sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+@serifFontFamily:       Georgia, "Times New Roman", Times, serif;
+@monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace;
+
 @baseFontSize:          13px;
-@baseFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+@baseFontFamily:        @sansFontFamily;
 @baseLineHeight:        18px;
-@altFontFamily:         Georgia, "Times New Roman", Times, serif;
+@altFontFamily:         @serifFontFamily;
 
 @headingsFontFamily:    inherit; // empty to use BS default, @baseFontFamily
 @headingsFontWeight:    bold;    // instead of browser default, bold
@@ -68,7 +74,7 @@
 // -------------------------
 @btnBackground:                     @white;
 @btnBackgroundHighlight:            darken(@white, 10%);
-@btnBorder:                         darken(@white, 20%);
+@btnBorder:                         #ccc;
 
 @btnPrimaryBackground:              @linkColor;
 @btnPrimaryBackgroundHighlight:     spin(@btnPrimaryBackground, 15%);
@@ -93,8 +99,9 @@
 // -------------------------
 @inputBackground:               @white;
 @inputBorder:                   #ccc;
+@inputBorderRadius:             3px;
 @inputDisabledBackground:       @grayLighter;
-
+@formActionsBackground:         #f5f5f5;
 
 // Dropdowns
 // -------------------------
@@ -141,12 +148,12 @@
 // Navbar
 // -------------------------
 @navbarHeight:                    40px;
-@navbarBackground:                spin(@green,-40);
+@navbarBackground:                @themeColor;
 @navbarBackgroundHighlight:       darken(@navbarBackground,10%);
 
-@navbarText:                      @grayLight;
-@navbarLinkColor:                 lighten(@grayLight,30%);
-@navbarLinkColorHover:            @white;
+@navbarText:                      complement(contrast(@navbarBackground));
+@navbarLinkColor:                 lighten(@navbarText,30%);
+@navbarLinkColorHover:            @navbarLinkColor;
 @navbarLinkColorActive:           @navbarLinkColorHover;
 @navbarLinkBackgroundHover:       transparent;
 @navbarLinkBackgroundActive:      @navbarBackground;
@@ -155,11 +162,12 @@
 @navbarSearchBackgroundFocus:     @white;
 @navbarSearchBorder:              darken(@navbarSearchBackground, 30%);
 @navbarSearchPlaceholderColor:    #ccc;
+@navbarBrandColor:                @navbarLinkColor;
 
 
 // Hero unit
 // -------------------------
-@heroUnitBackground:              @grayLighter;
+@heroUnitBackground:              #FaFaFa;
 @heroUnitHeadingColor:            inherit;
 @heroUnitLeadColor:               inherit;
 
@@ -184,7 +192,6 @@
 
 
 
-
 // GRID
 // --------------------------------------------------
 
@@ -194,7 +201,6 @@
 @gridColumnWidth:         60px;
 @gridGutterWidth:         20px;
 @gridRowWidth:            (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
-
 
 // Fluid grid
 // -------------------------
