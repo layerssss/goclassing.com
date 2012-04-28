@@ -14,6 +14,7 @@ $load('master/frame.master.js')({
         <div class="span6">
             <!--*/
             $load('inline/course.inline.js')({ course: tags[i].course }); /*-->
+            <hr />
         </div>
         <!--*/
         } /*-->
