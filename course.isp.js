@@ -136,7 +136,6 @@ $load("master/cframe.master.js")({
             <!--*/}/*-->
         </div>
     </div>
-    
     <section class="intro row" style="display: none;">
     <form class="span10 form-horizontal" action="/Course/Edit?redirect=%20" enctype="multipart/form-data" 
     method="post">
@@ -148,6 +147,13 @@ $load("master/cframe.master.js")({
             <div class="controls">
                 <input readonly="readonly" name="id" type="text" value="{$c.id$}" class="input-xlarge" id="course-id" />
             </div>
+        </div>
+        <div class="control-group"><label class="control-label" for="course-id">
+                Preview:</label>
+               <div class="controls">
+               
+               <div class="span6"><hr /><!--*/$load('inline/course.inline.js')({course:c});/*--><hr /></div>
+               </div>
         </div>
         <div class="control-group">
             <label class="control-label" for="course-title">
