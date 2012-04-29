@@ -13,6 +13,7 @@ var c = arguments[0].course;
         {
             padding-top: 30px;
             padding-bottom: 40px;
+            
         }
     </style>
     <title><!--*/
@@ -35,9 +36,11 @@ if (typeof (arguments[0].title) == 'string') {
     <script src="/js/fancyBox/helpers/jquery.fancybox-buttons.js" type="text/javascript"></script>
     <link href="/js/fancyBox/helpers/jquery.fancybox-thumbs.css" rel="stylesheet" type="text/css" />
     <script src="/js/fancyBox/jquery.mousewheel-3.0.6.pack.js" type="text/javascript"></script>
+    <script src="/js/jquery.backstretch.min.js" type="text/javascript"></script>
     <script src="/js/scripts.js" type="text/javascript"></script>
     <script type="text/javascript">
-var teacherUsername="{$c.user.username$}";
+        var teacherUsername = "{$c.user.username$}";
+        var bg = "{$c.bg$}";
     </script>
     <script type="text/javascript">
         $(function () {
@@ -56,6 +59,7 @@ var teacherUsername="{$c.user.username$}";
                     }
                 }
             });
+            $.backstretch(bg, { speed: 150 });
         });
     </script>
     <!--*/

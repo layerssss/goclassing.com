@@ -221,7 +221,16 @@ $load("master/cframe.master.js")({
             <div class="controls">
                 <input class="input-file" name="icon" id="course-icon" type="file" />
                 <p class="help-block">
-                    Image size: 50*50</p>
+                    Image size: 70*70</p>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="course-bg">
+                Background:</label>
+            <div class="controls">
+                <input class="input-file" name="bg" id="course-bg" type="file" />
+                <p class="help-block">
+                    Image size(recommended): 600*???-1440*???</p>
             </div>
         </div>
         <div class="control-group">
