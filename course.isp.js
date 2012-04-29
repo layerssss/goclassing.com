@@ -59,6 +59,7 @@ $load("master/cframe.master.js")({
         See members...</a>
     <!--*/}/*-->
     <div class="span2">
+    <div class="well">
         <section class="hidden-phone">
         <h5>Teacher:</h5>
         <!--*/
@@ -106,7 +107,7 @@ $load("master/cframe.master.js")({
 } /*-->
     </ul>
     <!--*/}/*-->
-        </section>
+        </section></div>
     </div>
     <a class="btn btn-info admin visible-phone" data-toggle="button" href="#" onclick="$('.intro').toggle();return false;">
         <i class="icon-edit icon-white"></i>Edit</a>

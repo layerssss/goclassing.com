@@ -1,7 +1,7 @@
 /*<!--*/
 var u=arguments[0].user;
 /*-->
-<a class="thumbnail" href="{$u.username$}.user">
+<a class="thumbnail user" href="{$u.username$}.user">
             <!--*/
 if (!arguments[0].hideName) {/*-->
     <div class="row-fluid">
