@@ -84,7 +84,7 @@ $load("master/cframe.master.js")({
         <div class="span10"><!--*/
         $load('inline/user.inline.js')({user:joinings[i]});/*--></div>
         <div class="span2 admin"><a href="Course/Aproove?id={$urlEncode(c.id)$}&uid={$joinings[i].id$}&redirect=%20" class="btn btn-success btn-mini"><i class="icon-ok icon-white"></i></a>
-                    <a href="Course/Disaproove?id={$urlEncode(c.id)$}&uid={$joinings[i].id$}&redirect=%20" class="btn btn-danger btn-mini" style="margin-right:5px;"><i class="icon-remove icon-white"></i></a>
+                    <a title="Reject" data-confirm="Are you sure?" href="Course/Disaproove?id={$urlEncode(c.id)$}&uid={$joinings[i].id$}&redirect=%20" class="btn btn-danger btn-mini" style="margin-right:5px;"><i class="icon-remove icon-white"></i></a>
                     </div>
         </div>
             
@@ -100,7 +100,7 @@ $load("master/cframe.master.js")({
         <div class="span10"><!--*/
         $load('inline/user.inline.js')({user:learnings[i]});/*--></div>
         <div class="span2 admin">
-                    <a href="Course/Disaproove?id={$urlEncode(c.id)$}&uid={$learnings[i].id$}&redirect=%20" class="btn btn-danger btn-mini" style="margin-right:5px;"><i class="icon-remove icon-white"></i></a>
+                    <a title="Remove" data-confirm="Are you sure?" href="Course/Disaproove?id={$urlEncode(c.id)$}&uid={$learnings[i].id$}&redirect=%20" class="btn btn-danger btn-mini" style="margin-right:5px;"><i class="icon-remove icon-white"></i></a>
                     </div>
         </div></li>
         <!--*/
