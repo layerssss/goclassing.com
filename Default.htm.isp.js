@@ -22,38 +22,6 @@ $load('master/frame.master.js')({
         /*-->
 <div class="row">
     <div class="span6">
-        <ul class="row thumbnails hidden-phone">
-            <!--*/
-        var i = 0;
-        for (i = 0; i < courses.length; i++) {
-            var c = courses[i];
-            if (c == null) {
-                $('null');
-            }
-            /*-->
-            <li class="span1"><a style="background-color:#{$c.color$};" class="thumbnail course" href="{$c.id$}.course" title="{$c.title$}">
-                <img src="{$c.img$}" style="width: 100%; max-width: 100px;" />
-            </a>
-                <div class="des-course alert alert-info" style="display: none;">
-                    <a class="close" data-dismiss="alert">×</a>
-                    <!--*/
-            $load('inline/course.inline.js')({ course: c }); /*-->
-                </div>
-            </li>
-            <!--*/
-        }
-        for (; i < 24; i++) {
-            /*-->
-            <li class="span1"><a class="thumbnail" href="#" onclick="$('.create-course-btn').trigger('click');return false;"
-                title="Take over here!">
-                <img src="/img/blank.gif" style="width: 100%; max-width: 100px;" />
-            </a></li>
-            <!--*/
-        }
-        /*-->
-        </ul>
-    </div>
-    <div class="span6">
         <div class="hero-unit">
             <h2>
                 Welcome to Goclassing</h2>
@@ -97,6 +65,38 @@ $load('master/frame.master.js')({
             </fieldset>
             </form>
         </div>
+    </div>
+    <div class="span6">
+        <ul class="row thumbnails hidden-phone">
+            <!--*/
+        var i = 0;
+        for (i = 0; i < courses.length; i++) {
+            var c = courses[i];
+            if (c == null) {
+                $('null');
+            }
+            /*-->
+            <li class="span1"><a style="background-color:#{$c.color$};" class="thumbnail course" href="{$c.id$}.course" title="{$c.title$}">
+                <img src="{$c.img$}" style="width: 100%; max-width: 100px;" />
+            </a>
+                <div class="des-course alert alert-info" style="display: none;">
+                    <a class="close" data-dismiss="alert">×</a>
+                    <!--*/
+            $load('inline/course.inline.js')({ course: c }); /*-->
+                </div>
+            </li>
+            <!--*/
+        }
+        for (; i < 24; i++) {
+            /*-->
+            <li class="span1"><a class="thumbnail" href="#" onclick="$('.create-course-btn').trigger('click');return false;"
+                title="Take over here!">
+                <img src="/img/blank.gif" style="width: 100%; max-width: 100px;" />
+            </a></li>
+            <!--*/
+        }
+        /*-->
+        </ul>
     </div>
 </div>
 <!--*/
