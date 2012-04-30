@@ -141,8 +141,9 @@ $load("master/cframe.master.js")({
             <!--*/}/*-->
         </div>
     </div>
-    <section class="intro row" style="display: none;">
-    <form class="span10 form-horizontal" action="/Course/Edit?redirect=%20" enctype="multipart/form-data" 
+    <section class="intro span10" style="display: none;">
+    
+    <form class="well form-horizontal" action="/Course/Edit?redirect=%20" enctype="multipart/form-data" 
     method="post">
     <fieldset>
         <legend>Edit Course Info</legend>

@@ -135,7 +135,7 @@ $load("master/cframe.master.js")({
         </div></div></div>
         </section>
     </div><section class="intro span12" style="display: none;">
-    <form class="span10 form-horizontal" action="/Course/EditFile?redirect=%20&fid={$f.id$}" 
+    <form class="well form-horizontal" action="/Course/EditFile?redirect=%20&fid={$f.id$}" 
     method="post" enctype="multipart/form-data">
     <fieldset>
         <legend>Edit File Info</legend>
