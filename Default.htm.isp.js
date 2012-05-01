@@ -20,7 +20,7 @@ $load('master/frame.master.js')({
         var span8 = $('.hero-unit').removeClass('hero-unit').addClass('well').parent()
         .removeClass('span6').addClass('span8');
         for (var i = 0; i < files.length; i++) {
-            $('<div class="well"><img src="img/loading.gif" /></div>').prependTo(span8)
+            $('<div class="well row-fluid"><img src="img/loading.gif" /></div>').prependTo(span8)
             .load('/inline/' + files[i] + '.file');
         }
     };
