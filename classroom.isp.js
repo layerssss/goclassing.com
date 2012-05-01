@@ -1,9 +1,9 @@
 /*<!--*/
 
 $load("master/cframe.master.js")({
-    title:c.title,
+    title: c.title,
     head: function () {
-    /*-->
+        /*-->
 <link href="css/ui-lightness/jquery-ui-1.8.18.custom.css" rel="stylesheet" type="text/css" />
 <script src="js/jquery-ui-1.8.18.custom.min.js" type="text/javascript"></script>
 <script src="js/jquery.masonry.min.js" type="text/javascript"></script>
@@ -26,36 +26,59 @@ $load("master/cframe.master.js")({
 </script>
 <!--*/
     },
-    course:c,
+    course: c,
     body: function () {
         /*-->
 <div class="row">
     <section class="span12">
-    <div class="row"><div class="span12">
-    <div class="well admin">
-    <h5>
+        <div class="row"><div class="span12">
+        <div class="well admin">
+        <h5>
         Teacher's tools:</h5><a href="Course/AddType?id={$c.id$}&redirect=%20" class="btn btn-success"><i class="icon-plus-sign icon-white"></i>Add a New Block</a>
-    </div></div>
-    <div class="well admin add" style="display:none;">
-  <a class="close" onclick="$(this).parent().fadeOut(function(){ window.onresize();});return false;">×</a>
-  <form action="Course/UploadFile?redirect=%20" class="" method="post" enctype="multipart/form-data">
-  <label for="up-title">Title:</label>
-  <input id="up-title" type="text" class="" name="title" placeholder="" />
-  <input type="hidden" name="tid" id="tid" />
-  <div>
-  <button type="submit" class="btn btn-success"><i class="icon-upload icon-white"></i>Add</button>
-  <button type="button" class="btn" onclick="$(this).closest('.add').find('.close').trigger('click');">Cancel</button>
-  </div>
-</form>
+        </div></div>
+        <div class="well admin add" style="display:none;">
+        <a class="close" onclick="$(this).parent().fadeOut(function(){ window.onresize();});return false;">×</a>
+        <form action="Course/UploadFile?redirect=%20" class="" method="post" enctype="multipart/form-data">
+        <label for="up-title">Title:</label>
+        <input id="up-title" type="text" class="" name="title" placeholder="" />
+        <input type="hidden" name="tid" id="tid" />
+        <div>
+        <button type="submit" class="btn btn-success"><i class="icon-upload icon-white"></i>Add</button>
+        <button type="button" class="btn" onclick="$(this).closest('.add').find('.close').trigger('click');">Cancel</button>
+        </div>
+        </form>
 
-</div></div>
-    </section>
+        </div></div>
+        </section>
 </div>
 <div class="row types">
-    <!--*/for(var tid in types){var files=types[tid];/*-->
+    <!--*/
+        for (var tid in types) {
+            var files = types[tid]; /*-->
     <div class="span12">
         <div class="well">
-            <!--*/for(var j=0;j<files.length;j++){var f=files[j];/*-->
+            <!--*/
+            for (var j = 0; j < files.length; j++) {
+                var f = files[j];
+                var icon = {
+                    'jpg': 'picture',
+                    'jpeg': 'picture',
+                    'bmp': 'picture',
+                    'tif': 'picture',
+                    'png': 'picture',
+                    'rar': 'folder-close',
+                    'zip': 'folder-close',
+                    'gz': 'folder-close',
+                    'tar': 'folder-close',
+                    'pdf': 'file',
+                    'doc': 'file',
+                    'docx': 'file',
+                    'pdf': 'file',
+                    'xls': 'file'
+                }[f.ext];
+                //icons from http://twitter.github.com/bootstrap/base-css.html#icons
+                icon=icon?icon:'comment';
+                /*-->
             <div class="row-fluid file">
                 <div class="span6">
                     <h4>
@@ -67,11 +90,12 @@ $load("master/cframe.master.js")({
                                         </i></a>
                             </div>
                             <div class="btn-group">
-                                <a href="Course/DeleteFile?redirect=%20&fid={$f.id$}" data-confirm="All data within this topic will be DELETED, are you sure?" class="btn btn-danger btn-mini"
-                                    rel="tooltip" title="Delete"><i class="icon-trash icon-white"></i></a>
+                                <a href="Course/DeleteFile?redirect=%20&fid={$f.id$}" data-confirm="All data within this topic will be DELETED, are you sure?"
+                                    class="btn btn-danger btn-mini" rel="tooltip" title="Delete"><i class="icon-trash icon-white">
+                                    </i></a>
                             </div>
                         </div>
-                        <a href="{$f.id$}.file"><i class="icon-film"></i>&nbsp;{$f.title$}</a>
+                        <a href="{$f.id$}.file"><i class="icon-{$icon$}"></i>&nbsp;{$f.title$}</a>
                     </h4>
                     {$htmlEncode(f.desc)$}
                     <div class="smaller">
@@ -79,22 +103,27 @@ $load("master/cframe.master.js")({
                 </div>
                 <div class="span6">
                     <ul class="thumbnails">
-                        <!--*/for(var k=0;k<f.paticipated.length;k++){var u=f.paticipated[k];
+                        <!--*/
+                for (var k = 0; k < f.paticipated.length; k++) {
+                    var u = f.paticipated[k];
                     /*-->
                         <li>
                             <!--*/
-                        $load('inline/user.inline.js')({user:u,hideName:true});
-                        /*-->
+                    $load('inline/user.inline.js')({ user: u, hideName: true });
+                    /*-->
                         </li>
                         <!--*/
-                    }
-                    /*-->
+                }
+                /*-->
                     </ul>
                 </div>
             </div>
-            <!--*/}/*-->
-            <!--*/if(!files.length){/*-->
-            <!--*/}/*-->
+            <!--*/
+            } /*-->
+            <!--*/
+            if (!files.length) {/*-->
+            <!--*/
+            } /*-->
             <div style="text-align: right;" class="btn-toolbar admin">
                 <div class="btn-group">
                     <a href="Course/MoveUpType?redirect=%20&tid={$tid$}" class="btn btn-info btn-mini"
@@ -104,18 +133,18 @@ $load("master/cframe.master.js")({
                 </div>
                 <div class="btn-group">
                     <a href="Course/DeleteType?redirect=%20&tid={$tid$}" class="btn btn-danger btn-mini"
-                        rel="tooltip" data-confirm="All topics in this block will also be DELETED, are you sure?" title="Delete"><i class="icon-trash icon-white"></i></a>
-                        <a href="#"
-                            onclick="$('.add').hide().insertAfter($(this).parent().parent()).fadeIn().find('#tid').val('{$tid$}');window.onresize();return false;"
+                        rel="tooltip" data-confirm="All topics in this block will also be DELETED, are you sure?"
+                        title="Delete"><i class="icon-trash icon-white"></i></a><a href="#" onclick="$('.add').hide().insertAfter($(this).parent().parent()).fadeIn().find('#tid').val('{$tid$}');window.onresize();return false;"
                             class="btn btn-success btn-mini" rel="tooltip" title="Add a New Topic"><i class="icon-plus-sign icon-white">
                             </i></a>
                 </div>
             </div>
         </div>
     </div>
-    <!--*/}/*-->
+    <!--*/
+        } /*-->
 </div>
 <!--*/
-    } 
+    }
 });
 //-->
