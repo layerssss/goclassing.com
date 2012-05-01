@@ -17,7 +17,7 @@ $load('master/frame.master.js')({
     });
     var showNewFiles = function (files) {
         $('.newCourses').removeClass('span6').addClass('span4');
-        var span8 = $('<div class="well"><h6>New topics:</h6></div>').prependTo($('.hero-unit').removeClass('hero-unit').addClass('well').parent()
+        var span8 = $('<div class="well"><h6>New topics:</h6></div>').appendTo($('.hero-unit').removeClass('hero-unit').addClass('well').parent()
         .removeClass('span6').addClass('span8'));
         for (var i = 0; i < files.length; i++) {
             $('<div class="row-fluid"><img src="img/loading.gif" /></div>').appendTo(span8)
