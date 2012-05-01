@@ -96,3 +96,7 @@ section
 {
     position:relative;
 }
+.row-fluid>.span6:first-child
+{
+    margin-left:-1px;/*fix bootstap nested fluid layout bug*/
+}
