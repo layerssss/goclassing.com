@@ -124,7 +124,7 @@ arguments[0].body();
     <script type="text/javascript">
     </script>
     <!--*/
-$load('inline/ga.inline.js')(); /*-->
+$load('inline/ga.isp.js')(); /*-->
 </body>
 </html>
 <!--*/

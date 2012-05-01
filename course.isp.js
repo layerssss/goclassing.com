@@ -63,7 +63,7 @@ $load("master/cframe.master.js")({
         <section class="">
         <h5>Teacher:</h5>
         <!--*/
-        $load('inline/user.inline.js')({user:c.user});
+        $load('inline/user.isp.js')({user:c.user});
         /*-->
         <hr />
         <h5>Tags</h5>
@@ -82,7 +82,7 @@ $load("master/cframe.master.js")({
         <li class="span2">
         <div class="row-fluid">
         <div class="span10"><!--*/
-        $load('inline/user.inline.js')({user:joinings[i]});/*--></div>
+        $load('inline/user.isp.js')({user:joinings[i]});/*--></div>
         <div class="span2 admin"><a href="Course/Aproove?id={$urlEncode(c.id)$}&uid={$joinings[i].id$}&redirect=%20" class="btn btn-success btn-mini"><i class="icon-ok icon-white"></i></a>
                     <a title="Reject" data-confirm="Are you sure?" href="Course/Disaproove?id={$urlEncode(c.id)$}&uid={$joinings[i].id$}&redirect=%20" class="btn btn-danger btn-mini" style="margin-right:5px;"><i class="icon-remove icon-white"></i></a>
                     </div>
@@ -98,7 +98,7 @@ $load("master/cframe.master.js")({
         <!--*/for(var i =0;i<learnings.length;i++){var u=learnings[i];/*-->
         <li class="span2"><div class="row-fluid">
         <div class="span10"><!--*/
-        $load('inline/user.inline.js')({user:learnings[i]});/*--></div>
+        $load('inline/user.isp.js')({user:learnings[i]});/*--></div>
         <div class="span2 admin">
                     <a title="Remove" data-confirm="Are you sure?" href="Course/Disaproove?id={$urlEncode(c.id)$}&uid={$learnings[i].id$}&redirect=%20" class="btn btn-danger btn-mini" style="margin-right:5px;"><i class="icon-remove icon-white"></i></a>
                     </div>
@@ -158,7 +158,7 @@ $load("master/cframe.master.js")({
                 Preview:</label>
                <div class="controls">
                
-               <div class="span6"><hr /><!--*/$load('inline/course.inline.js')({course:c});/*--><hr /></div>
+               <div class="span6"><hr /><!--*/$load('inline/course.isp.js')({course:c});/*--><hr /></div>
                </div>
         </div>
         <div class="control-group">
@@ -242,7 +242,7 @@ $load("master/cframe.master.js")({
                 <p class="help-block">
                     Support tags(<a href="/101.file" target="_blank">view all...</a>):</p>
                 <pre>
-<!--*/$load('inline/contentHelper.inline.js')();/*--></pre>
+<!--*/$load('inline/contentHelper.isp.js')();/*--></pre>
                 <textarea wrap="soft" name="home" class="" maxlength="10000" style="width:95%;" id="textarea" rows="20">{$c.home$}</textarea>
             </div>
         </div>

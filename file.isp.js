@@ -100,7 +100,7 @@ $load("master/cframe.master.js")({
         <div class="row-fluid">
         <div class="span2">
         <!--*/
-            $load('inline/user.inline.js')({user:r.user}); /*-->
+            $load('inline/user.isp.js')({user:r.user}); /*-->
         <h6>{$r.time$}</h6>
         </div>
         <div class="span10">
@@ -167,7 +167,7 @@ $load("master/cframe.master.js")({
                     Support tags(<a href="/101.file" target="_blank">view all...</a>):</p>
                 <pre>
 <!--*/
-        $load('inline/contentHelper.inline.js')(); /*--></pre>
+        $load('inline/contentHelper.isp.js')(); /*--></pre>
                 <textarea name="content" wrap="soft" maxlength="10000" style="width:95%;" id="textarea" rows="20">{$f.content$}</textarea>
             </div>
         </div>

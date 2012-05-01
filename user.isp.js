@@ -30,7 +30,7 @@ $load('master/frame.master.js')({
                 <!--*/
         for (var i = 0; i < teachings.length; i++) {
             var c = teachings[i];
-            $load('inline/course.inline.js')({course:c});
+            $load('inline/course.isp.js')({course:c});
 
             /*-->
                 <hr />
@@ -45,7 +45,7 @@ $load('master/frame.master.js')({
                 <!--*/
         for (var i = 0; i < learnings.length; i++) {
             var c = learnings[i];
-            $load('inline/course.inline.js')({ course: c });
+            $load('inline/course.isp.js')({ course: c });
             /*-->
                 <hr />
                 <!--*/

@@ -131,7 +131,7 @@ arguments[0].body();
                 Image Uploading Advice</h3>
         </div>
         <div class="modal-body">
-    <!--*/$load('inline/imgUploadingAdvice.inline.js')();/*-->
+    <!--*/$load('inline/imgUploadingAdvice.isp.js')();/*-->
         </div>
         <div class="modal-footer">
             <a href="#" data-dismiss="modal" class="btn btn-primary">Close</a>
@@ -145,7 +145,7 @@ arguments[0].body();
     <script type="text/javascript">
     </script>
     <!--*/
-$load('inline/ga.inline.js')(); /*-->
+$load('inline/ga.isp.js')(); /*-->
 </body>
 </html>
 <!--*/

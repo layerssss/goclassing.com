@@ -82,7 +82,7 @@ $load('master/frame.master.js')({
                 <div class="des-course alert alert-info" style="display: none;">
                     <a class="close" data-dismiss="alert">×</a>
                     <!--*/
-            $load('inline/course.inline.js')({ course: c }); /*-->
+            $load('inline/course.isp.js')({ course: c }); /*-->
                 </div>
             </li>
             <!--*/

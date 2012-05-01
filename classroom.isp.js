@@ -109,7 +109,7 @@ $load("master/cframe.master.js")({
                     /*-->
                         <li>
                             <!--*/
-                    $load('inline/user.inline.js')({ user: u, hideName: true });
+                    $load('inline/user.isp.js')({ user: u, hideName: true });
                     /*-->
                         </li>
                         <!--*/

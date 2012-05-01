@@ -13,7 +13,7 @@ $load('master/frame.master.js')({
         for (var i = 0; i < tags.length; i++) {/*-->
         <div class="span6">
             <!--*/
-            $load('inline/course.inline.js')({ course: tags[i].course }); /*-->
+            $load('inline/course.isp.js')({ course: tags[i].course }); /*-->
             <hr />
         </div>
         <!--*/

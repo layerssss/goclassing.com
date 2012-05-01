@@ -28,7 +28,7 @@ $load('master/frame.master.js')({
             var c = courses[i]; /*-->
         <div class="span6">
             <!--*/
-            $load('inline/course.inline.js')({ course: c }); /*-->
+            $load('inline/course.isp.js')({ course: c }); /*-->
             <hr />
         </div>
         <!--*/

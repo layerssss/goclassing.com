@@ -17,7 +17,7 @@ $load('master/frame.master.js')({
               /*-->
         <li class="span2">
         <!--*/
-            $load('inline/user.inline.js')({user:users[i]});
+            $load('inline/user.isp.js')({user:users[i]});
             /*-->
             </li>
             <!--*/
@@ -36,7 +36,7 @@ $load('master/frame.master.js')({
             var c = courses[i]; /*-->
         <div class="span6">
             <!--*/
-            $load('inline/course.inline.js')({ course: c }); /*-->
+            $load('inline/course.isp.js')({ course: c }); /*-->
             <hr />
         </div>
         <!--*/
