@@ -79,43 +79,20 @@ $load("master/cframe.master.js")({
                 //icons from http://twitter.github.com/bootstrap/base-css.html#icons
                 icon=icon?icon:'comment';
                 /*-->
-            <div class="row-fluid file">
-                <div class="span6">
-                    <h4>
-                        <div style="float: right" class="admin btn-toolbar">
-                            <div class="btn-group">
-                                <a href="Course/MoveUpFile?redirect=%20&fid={$f.id$}" class="btn btn-info btn-mini"
-                                    rel="tooltip" title="Move Up"><i class="icon-arrow-up icon-white"></i></a><a href="Course/MoveDownFile?redirect=%20&fid={$f.id$}"
-                                        class="btn btn-info btn-mini" rel="tooltip" title="Move Down"><i class="icon-arrow-down icon-white">
-                                        </i></a>
-                            </div>
-                            <div class="btn-group">
-                                <a href="Course/DeleteFile?redirect=%20&fid={$f.id$}" data-confirm="All data within this topic will be DELETED, are you sure?"
-                                    class="btn btn-danger btn-mini" rel="tooltip" title="Delete"><i class="icon-trash icon-white">
-                                    </i></a>
-                            </div>
-                        </div>
-                        <a href="{$f.id$}.file"><i class="icon-{$icon$}"></i>&nbsp;{$f.title$}</a>
-                    </h4>
-                    {$htmlEncode(f.desc)$}
-                    <div class="smaller">
-                        updated: {$f.timeString$}</div>
-                </div>
-                <div class="span6">
-                    <ul class="thumbnails">
-                        <!--*/
-                for (var k = 0; k < f.paticipated.length; k++) {
-                    var u = f.paticipated[k];
-                    /*-->
-                        <li>
-                            <!--*/
-                    $load('inline/user.isp.js')({ user: u, hideName: true });
-                    /*-->
-                        </li>
-                        <!--*/
-                }
-                /*-->
-                    </ul>
+            <div class="row-fluid file" style="position:relative;">
+                <!--*/$load('inline/file.isp.js')({file:f});/*-->
+                <div style="position: absolute; right: 10px; top: 10px;" class="admin btn-toolbar">
+                    <div class="btn-group">
+                        <a href="Course/MoveUpFile?redirect=%20&fid={$f.id$}" class="btn btn-info btn-mini"
+                            rel="tooltip" title="Move Up"><i class="icon-arrow-up icon-white"></i></a><a href="Course/MoveDownFile?redirect=%20&fid={$f.id$}"
+                                class="btn btn-info btn-mini" rel="tooltip" title="Move Down"><i class="icon-arrow-down icon-white">
+                                </i></a>
+                    </div>
+                    <div class="btn-group">
+                        <a href="Course/DeleteFile?redirect=%20&fid={$f.id$}" data-confirm="All data within this topic will be DELETED, are you sure?"
+                            class="btn btn-danger btn-mini" rel="tooltip" title="Delete"><i class="icon-trash icon-white">
+                            </i></a>
+                    </div>
                 </div>
             </div>
             <!--*/
