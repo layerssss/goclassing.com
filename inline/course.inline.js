@@ -7,7 +7,7 @@ var c = arguments[0].course;
                                 <img src="{$c.img$}" style="width: 100%; max-width: 70px;" />
                             </a>
                         </div>
-                        <div class="span6">
+                        <div class="span6" style="overflow:hidden;height:75px;">
                             <h5>
                                 <a href="{$c.id$}.course">{$c.title$}</a></h5>
                             
