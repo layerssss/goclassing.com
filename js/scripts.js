@@ -17,3 +17,61 @@
         $('.nav a:not(.btn) i').removeClass('icon-white');
     }
 });
+var teacherUsername;
+$(function () {
+    $('.admin').toggleClass('not');
+    $('[title]').tooltip({ placement: 'bottom' });
+    $('textarea').keydown(function (e) {
+        if (e.ctrlKey && e.keyCode == 13) {
+            $(this).closest("form").trigger("submit");
+        }
+    });
+    window.onunload = function () {
+        $('.loading').show();
+    };
+    $.ajax({
+        url: '/Auth/GetStatus',
+        cache: false,
+        dataType: 'jsonp',
+        success: function (j) {
+            if (j.message) {
+                $('#myModal .modal-body').text(String(j.message));
+                $('#myModal').modal('show');
+            } 
+            if (j.me == null) {
+                $('#slf>li').toggle();
+                $('#fb_btn').click(function () {
+                    return false;
+                });
+                $.ajax({
+                    url: '/Auth/GetLoginUrl',
+                    data: {
+                        provider: 'facebook',
+                        remember: false
+                    },
+                    dataType: 'json',
+                    success: function (j) {
+                        $('#fb_btn').click(function () {
+                            window.open(j.url, null, 'toolbars=no,left=' + (window.screenX + 100) + ',top=' + (window.screenY + 120) + ',width=' + ($(window).width() - 200) + ',height=500');
+                            return false;
+                        });
+                    }
+                });
+            } else {
+                if (j.me.username == teacherUsername) {
+                    $('.admin').toggleClass('not');
+                    if (typeof (admin) == 'function') {
+                        admin();
+                    }
+                }
+                $('a.profile').attr('href', '/' + j.me.username + '.user');
+                $('#slf a.name').text(j.me.name);
+                $('#slf img.avatar').attr('src', j.me.avatarUrl).show();
+            }
+        }
+    });
+
+});
+var oAuthFinished = function () {
+    location.reload();
+};

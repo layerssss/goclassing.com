@@ -39,18 +39,11 @@ if (typeof (arguments[0].title) == 'string') {
     <script src="/js/jquery.backstretch.min.js" type="text/javascript"></script>
     <script src="/js/scripts.js" type="text/javascript"></script>
     <script type="text/javascript">
-        var teacherUsername = "{$c.user.username$}";
+        teacherUsername = "{$c.user.username$}";
         var bg = "{$c.bg$}";
     </script>
     <script type="text/javascript">
         $(function () {
-            $('.admin').toggleClass('not');
-            $('[title]').tooltip({placement:'bottom'});
-            $('textarea').keydown(function (e) {
-                if (e.ctrlKey && e.keyCode == 13) {
-                    $(this).closest("form").trigger("submit");
-                }
-            });
             $('a.fancybox').fancybox({
                 helpers: {
                     thumbs: {
@@ -150,56 +143,6 @@ arguments[0].body();
     <!-- Placed at the end of the document so the pages load faster -->
     <script type="text/javascript" src="/js/bootstrap.min.js"></script>
     <script type="text/javascript">
-        $(function () {
-            window.onunload = function () {
-                $('.loading').show();
-            };
-            $.ajax({
-                url: '/Auth/GetStatus',
-                cache:false,
-                dataType: 'jsonp',
-                success: function (j) {
-                    if (j.message) {
-                        $('#myModal .modal-body').text(String(j.message));
-                        $('#myModal').modal('show');
-                    }
-                    if (j.me == null) {
-                        $('#slf>li').toggle();
-                        $('#fb_btn').click(function () {
-                            return false;
-                        });
-                        $.ajax({
-                            url: '/Auth/GetLoginUrl',
-                            data: {
-                                provider: 'facebook',
-                                remember: false
-                            },
-                            dataType: 'json',
-                            success: function (j) {
-                                $('#fb_btn').click(function () {
-                                    window.open(j.url, null, 'toolbars=no,left=' + (window.screenX + 100) + ',top=' + (window.screenY + 120) + ',width=' + ($(window).width() - 200) + ',height=500');
-                                    return false;
-                                });
-                            }
-                        });
-                    } else {
-                        if (j.me.username == teacherUsername) {
-                            $('.admin').toggleClass('not');
-                            if (typeof (admin) == 'function') {
-                                admin();
-                            }
-                        }
-                        $('a.profile').attr('href', '/' + j.me.username + '.user');
-                        $('#slf a.name').text(j.me.name);
-                        $('#slf img.avatar').attr('src', j.me.avatarUrl).show();
-                    }
-                }
-            });
-
-        });
-        var oAuthFinished = function () {
-            location.reload();
-        };
     </script>
     <!--*/
 $load('inline/ga.inline.js')(); /*-->
