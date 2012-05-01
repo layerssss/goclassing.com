@@ -55,12 +55,12 @@ $load("master/cframe.master.js")({
 </div>
 <div class="row">
     <!--*/if(!c.pub){/*-->
-    <a href="#" class="btn visible-phone" data-toggle="button" onclick="$(this).next().find('section').toggleClass('hidden-phone');return false;">
+    <a href="#" class="btn visible-phone" data-toggle="button" onclick="$(this).next().children().toggleClass('hidden-phone');return false;">
         See members...</a>
     <!--*/}/*-->
     <div class="span2">
-    <div class="well">
-        <section class="hidden-phone">
+    <div class="well hidden-phone">
+        <section class="">
         <h5>Teacher:</h5>
         <!--*/
         $load('inline/user.inline.js')({user:c.user});
