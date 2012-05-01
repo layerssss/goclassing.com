@@ -37,7 +37,7 @@ $(function () {
             if (j.message) {
                 $('#myModal .modal-body').text(String(j.message));
                 $('#myModal').modal('show');
-            } 
+            }
             if (j.me == null) {
                 $('#slf>li').toggle();
                 $('#fb_btn').click(function () {
@@ -67,6 +67,13 @@ $(function () {
                 $('a.profile').attr('href', '/' + j.me.username + '.user');
                 $('#slf a.name').text(j.me.name);
                 $('#slf img.avatar').attr('src', j.me.avatarUrl).show();
+                if (j.newFiles.length) {
+                    if (typeof (showNewFiles) == 'function') {
+                        showNewFiles(j.newFiles);
+                    } else {
+                        $('<a title="' + j.newFiles.length + ' new topic' + (j.newFiles.length == 1 ? '' : 's') + '" class="msg badge badge-info" href="/"><i class="icon-info-sign icon-white"></i>' + j.newFiles.length + '</a>').appendTo('.brand').tooltip({ placement: 'bottom' });
+                    }
+                }
             }
         }
     });

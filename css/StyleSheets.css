@@ -84,3 +84,15 @@ section
 {
     z-index:2 !important;
 }
+.msg
+{
+    position:absolute;
+    right:0;
+    text-indent:0;   
+    bottom: -5px;
+    display:block; padding: 5px;
+}
+.brand
+{
+    position:relative;
+}

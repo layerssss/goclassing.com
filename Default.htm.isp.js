@@ -15,6 +15,15 @@ $load('master/frame.master.js')({
             return false;
         });
     });
+    var showNewFiles = function (files) {
+        $('.newCourses').removeClass('span6').addClass('span4');
+        var span8 = $('.hero-unit').removeClass('hero-unit').addClass('well').parent()
+        .removeClass('span6').addClass('span8');
+        for (var i = 0; i < files.length; i++) {
+            $('<div class="well"><img src="img/loading.gif" /></div>').prependTo(span8)
+            .load('/inline/' + files[i] + '.file');
+        }
+    };
 </script>
 <!--*/
     },
@@ -66,7 +75,7 @@ $load('master/frame.master.js')({
             </form>
         </div>
     </div>
-    <div class="span6">
+    <div class="span6 newCourses">
         <ul class="row thumbnails hidden-phone">
             <!--*/
         var i = 0;
