@@ -85,6 +85,7 @@
 	margin: 0;
 	padding: 0;
 	height: 11px;
+	width:auto;
 }
 .colorpicker_hex {
 	position: absolute;
