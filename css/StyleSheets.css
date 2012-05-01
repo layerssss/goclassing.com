@@ -97,5 +97,5 @@ section
     position:relative;
 }
 .row-fluid .span6 {
-    width: 48.9%;/*fix bootstap nested fluid layout bug*/
+    width: 48.7%;/*fix bootstap nested fluid layout bug*/
 }
