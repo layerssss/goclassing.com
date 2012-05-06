@@ -74,6 +74,10 @@ $(function () {
                         $('<a title="' + j.newFiles.length + ' new topic' + (j.newFiles.length == 1 ? '' : 's') + '" class="msg badge badge-info" href="/"><i class="icon-info-sign icon-white"></i>' + j.newFiles.length + '</a>').appendTo('.brand').tooltip({ placement: 'bottom' });
                     }
                 }
+                $('[data-anticsrf]').each(function (i, e) {
+                    var ac = $(e).attr('data-anticsrf');
+                    $(e).attr(ac, $(e).attr(ac).replace('ANTICSRF', j.antiCSRF));
+                });
             }
         }
     });
