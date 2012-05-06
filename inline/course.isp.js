@@ -23,7 +23,7 @@ var c = arguments[0].course;
                             <a href="{$c.id$}.course" class="btn btn-info"><i class="icon-search icon-white">
                             </i>Visit</a>
                             <!--*/if(!c.pub){/*-->
-                            <a href="/Course/Join?id={$c.id$}&redirect=%20" class="btn btn-success"><i class="icon-plus icon-white">
+                            <a href="/Course/Join?id={$c.id$}&ANTICSRF=&redirect=%20" class="btn btn-success"><i class="icon-plus icon-white">
                             </i>Join</a> 
                             <!--*/}else{/*-->
                             <a class="btn btn-success disabled" href="#" onclick="return false;"

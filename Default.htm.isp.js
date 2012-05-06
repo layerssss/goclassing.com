@@ -45,7 +45,7 @@ $load('master/frame.master.js')({
         </div>
         <div class="alert alert-success create-course" style="display: none;">
             <a class="close" data-dismiss="alert">×</a>
-            <form class="form" action="/Course/Create?redirect=/{cid}.course" method="post">
+            <form class="form" action="/Course/Create?ANTICSRF=&redirect=/{cid}.course" method="post">
             <fieldset>
                 <legend>Create a course</legend>
                 <div class="control-group">

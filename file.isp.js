@@ -107,7 +107,7 @@ $load("master/cframe.master.js")({
         </div>
         <div class="span10">
 
-        <a class="close admin" href="/Course/DelComment?cid={$r.id$}&redirect=%20" title="Delete it">&times;</a>
+        <a class="close admin" href="/Course/DelComment?cid={$r.id$}&ANTICSRF=&redirect=%20" title="Delete it">&times;</a>
         {$htmlEncode(r.content)$}
 
         </div></div></div>
@@ -118,7 +118,7 @@ $load("master/cframe.master.js")({
         <div class="span2"><br />
         </div>
         <div class="span10">
-        <form class="form" action="/Course/Comment?redirect=%20&fid={$f.id$}" 
+        <form class="form" action="/Course/Comment?ANTICSRF=&redirect=%20&fid={$f.id$}" 
     method="post">
     <fieldset>
         <legend>Say Something</legend>
@@ -137,7 +137,7 @@ $load("master/cframe.master.js")({
         </div></div></div>
         </section>
     </div><section class="intro span12" style="display: none;">
-    <form class="well form-horizontal" action="/Course/EditFile?redirect=%20&fid={$f.id$}" 
+    <form class="well form-horizontal" action="/Course/EditFile?ANTICSRF=&redirect=%20&fid={$f.id$}" 
     method="post" enctype="multipart/form-data">
     <fieldset>
         <legend>Edit File Info</legend>
