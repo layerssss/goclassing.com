@@ -76,7 +76,7 @@ $(function () {
                 }
                 $('[data-anticsrf]').each(function (i, e) {
                     var ac = $(e).attr('data-anticsrf');
-                    $(e).attr(ac, $(e).attr(ac).replace('ANTICSRF', j.antiCSRF));
+                    $(e).attr(ac, $(e).attr(ac).replace('ANTICSRF=','ANTICSRF='+ j.antiCSRF));
                 });
             }
         }
