@@ -92,7 +92,9 @@ $load("master/cframe.master.js")({
         
         </div>
         <section id="Discussion">
+        <div class="well">
         <h2 class="page-header">Discussion</h2>
+        </div>
         <!--*/
         for (var i = 0; i < replies.length; i++) {
             var r = replies[i]; /*-->
@@ -149,7 +151,7 @@ $load("master/cframe.master.js")({
         <div class="control-group">
   <label class="control-label" for="up-file">Attachment(optional):</label>
             <div class="controls">
-  <input class="input-xlarge" id="up-file" type="file" class="" name="file" placeholder="select a file¡­" />
+  <input class="input-xlarge" id="up-file" type="file" class="" name="file" placeholder="select a fileï¿½ï¿½" />
         </div>
         </div>
         <div class="control-group">
