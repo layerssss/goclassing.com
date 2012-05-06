@@ -100,7 +100,8 @@ arguments[0].body();
 /*-->
         <hr>
         <footer>
-<p>&copy; Goclassing.com 2012 <a href="/82.file">privacy</a>  <a href="https://github.com/layerssss/goclassing.com" target="_blank">source</a></p>
+<p>&copy; Goclassing.com 2012 <a href="/82.file">privacy</a>  
+<a href="https://github.com/layerssss/goclassing.com/blob/master/{$$cur$}" target="_blank">source</a></p>
 </footer>
     </div>
     <!-- /container -->
