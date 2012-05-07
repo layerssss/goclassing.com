@@ -14,7 +14,7 @@ $load("master/cframe.master.js")({
                 <li>{$c.title$}</li>
                 <!--*/
         if (f.ext.length) {/*-->
-                <li><span><a href="Course/OpenFile?fid={$f.id$}&ANTICSFR" data-anticsrf="href" target="_blank" style="display: block;"
+                <li><span><a href="Course/OpenFile?fid={$f.id$}&ANTICSRF" data-anticsrf="href" target="_blank" style="display: block;"
                     class="btn btn-primary"><i class="icon-file icon-white"></i>Open '{$f.title$}.{$f.ext$}'</a></span></li>
                 <!--*/
         } /*-->
