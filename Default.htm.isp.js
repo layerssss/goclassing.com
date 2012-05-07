@@ -96,7 +96,7 @@ $load('master/frame.master.js')({
             </li>
             <!--*/
         }
-        for (; i < 24; i++) {
+        for (; i < 30; i++) {
             /*-->
             <li class="span1"><a class="thumbnail" href="#" onclick="$('.create-course-btn').trigger('click');return false;"
                 title="Take over here!">
