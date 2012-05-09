@@ -144,13 +144,13 @@
 	left: 282px;
 }
 .colorpicker_submit {
-	position: absolute;
-	width: 22px;
-	height: 22px;
-	background: url(../images/colorpicker_submit.png) top;
-	left: 322px;
-	top: 142px;
-	overflow: hidden;
+	background: url("../images/colorpicker_submit.png") no-repeat scroll left top transparent;
+    height: 22px;
+    left: 292px;
+    overflow: hidden;
+    position: absolute;
+    top: 142px;
+    width: 54px;
 }
 .colorpicker_focus {
 	background-position: center;
@@ -159,7 +159,7 @@
 	background-position: bottom;
 }
 .colorpicker_submit.colorpicker_focus {
-	background-position: bottom;
+	background-position:left bottom;
 }
 .colorpicker_slider {
 	background-position: bottom;
