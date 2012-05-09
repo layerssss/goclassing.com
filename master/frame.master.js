@@ -8,10 +8,9 @@
     <!-- Le styles -->
     <link href="/css/688137.mybootstrap.css" rel="stylesheet" />
     <style type="text/css">
-        body
+        body>.container
         {
             padding-top: 60px;
-            padding-bottom: 40px;
         }
     </style>
     <title><!--*/

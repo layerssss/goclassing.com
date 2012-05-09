@@ -9,10 +9,9 @@ var c = arguments[0].course;
     <!-- Le styles -->
     <link href="/css/{$c.color$}.mybootstrap.css" rel="stylesheet" />
     <style type="text/css">
-        body
+        body>.container
         {
             padding-top: 30px;
-            padding-bottom: 40px;
             
         }
     </style>
