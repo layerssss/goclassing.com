@@ -47,7 +47,7 @@ $(function () {
                     url: '/Auth/GetLoginUrl',
                     data: {
                         provider: 'facebook',
-                        remember: false
+                        remember: true
                     },
                     dataType: 'json',
                     success: function (j) {
