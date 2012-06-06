@@ -25,5 +25,7 @@ for (var k = 0; k < f.paticipated.length; k++) {
 }
 /*-->
 </ul>
-</div><!--*/
+</div>
+<div class="span12" style="border-top:1px solid #ccc;margin-left:-1px;"></div>
+<!--*/
 //-->
