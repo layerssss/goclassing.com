@@ -251,6 +251,8 @@ $load("master/cframe.master.js")({
                 Save (Ctrl + Enter)</button>
             <button type="button" onclick="$('.btn-info:visible').trigger('click');" class="btn">
                 Cancel</button>
+            <a href="/Course/Delete?id={$c.id$}&redirect={$urlEncode('/')$}&ANTICSRF=" class="btn btn-danger" data-confirm="All topics, students in this course will also be DELETED, are you sure?" data-anticsrf="href" >
+                Delete</a>
         </div>
     </fieldset>
     </form></section>
