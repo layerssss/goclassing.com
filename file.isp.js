@@ -152,6 +152,9 @@ $load("master/cframe.master.js")({
   <label class="control-label" for="up-file">Attachment(optional):</label>
             <div class="controls">
   <input class="input-xlarge" id="up-file" type="file" class="" name="file" placeholder="select a file" />
+  <!--*/if(f.ext!=""){ /*-->
+  <a href="/Course/DetachFile?fid={$f.id$}&redirect=&ANTICSRF=" class="btn btn-danger" data-confirm="This attachment will be DELETED, are you sure?" data-anticsrf="href">Detach '{$f.title$}.{$f.ext$}'</a>
+  <!--*/}/*-->
         </div>
         </div>
         <div class="control-group">
