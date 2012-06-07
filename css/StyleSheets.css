@@ -20,7 +20,7 @@
 }
 .navbar .brand.brand-gc
 {
-    width:225px;
+    width:205px;
     display:block;
     height:40px;
     background-image:url(/img/header-logo.png);
@@ -104,4 +104,14 @@ i.icon-mobile
 {
     background-image:url('/img/glyphicons_163_iphone.png');
     background-position:0 0;
+}
+.profile.btn-navbar
+{
+    padding:1px 3px;
+}
+.profile.btn-navbar>img
+{ 
+    height: 25px;
+    width: 25px;
+    display:inline !important;
 }

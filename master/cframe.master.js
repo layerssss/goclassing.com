@@ -50,7 +50,7 @@ if (typeof (arguments[0].title) == 'string') {
                         height: 50
                     }
                 }
-            });
+            }); 
             $.backstretch(bg, { speed: 150 });
         });
     </script>
@@ -71,7 +71,10 @@ var act3 = ($cur == 'Mobile.htm.isp.js') ? 'active' : '';
             <div class="container" style="position: relative">
                 <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span
                     class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-                </a><a class="brand" href="/{$c.id$}.course">
+                </a>
+                <a class="btn btn-navbar profile" href="/">
+                            <img class="avatar" src="/img/signin.png" /></a>
+                <a class="brand" href="/{$c.id$}.course">
                     <img src="{$c.img$}" style="width: 35px; height: 35px; position: absolute; left: 2px;
                         top: 2px;" />
                     <span style="margin-left: 40px;">{$c.title$}</span></a>
@@ -82,18 +85,17 @@ var act3 = ($cur == 'Mobile.htm.isp.js') ? 'active' : '';
                         <li class="{$act2$}"><a href="{$c.id$}.classroom"><i class="icon-book icon-white"></i><!--*/
 if (c.pub) { /*-->Plaza<!--*/ } else { /*-->Classroom<!--*/ } /*--></a></li>
                         <li class="divider-vertical"></li>
-                        <li><a href="http://goclassing.com/"><span class="brand-gc-mini">Goclassing.com</span></a></li>
+                        <li><a href="/"><span class="brand-gc-mini">Goclassing.com</span></a></li>
                         <li class="{$act3$} visible-desktop"><a title="Mobile" href="/Mobile.htm"><i class="icon-mobile icon-white"></i></a></li>
                     </ul>
                     <ul class="pull-right nav" id="slf">
-                        <li class=""><a href="/" class="profile">
+                        <li class="visible-desktop"><a href="/" class="profile">
                             <img class="avatar" /></a></li>
                         <li class=""><a href="/" class="profile name"><i class="icon-time icon-white"></i>loading...</a></li>
                         <li class="">
-                            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><b
+                            <li class="dropdown"><a href="#" class="dropdown-toggle visible-desktop" data-toggle="dropdown"><b
                                 class="caret"></b></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="/" class="profile"><i class="icon-user"></i>Profile</a></li>
                                     <li><a href="/Auth/Logout?redirect=%20"><i class="icon-off"></i>Logout</a></li>
                                 </ul>
                             </li>

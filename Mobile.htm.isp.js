@@ -1,6 +1,6 @@
 ﻿/*<!--*/
 $load('master/frame.master.js')({
-    title: 'd',
+    title: 'Mobile',
     head: function () { /*-->
 <style type="text/css">
     .ipad

@@ -35,7 +35,10 @@ arguments[0].head(); /*-->
             <div class="container">
                 <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span
                     class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-                </a><a class="brand brand-gc" href="/">Goclassing</a>
+                </a>
+                <a class="btn btn-navbar profile" href="/">
+                            <img class="avatar" src="/img/signin.png" /></a>
+                <a class="brand brand-gc" href="/">Goclassing</a>
                 <div class="nav-collapse">
                     <ul class="nav">
                         <!--*/
@@ -49,7 +52,7 @@ var act2 = (($cur == 'users.isp.js') ||
 var act3 = ($cur == 'Mobile.htm.isp.js') ? 'active' : '';
 /*-->
                         <li class="{$act1$}"><a href="/"><i class="icon-home icon-white"></i>Home</a></li>
-                        <li class="dropdown {$act2$}"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <li class="dropdown {$act2$}"><a href="#" class="dropdown-toggle  visible-desktop" data-toggle="dropdown">
                             <i class="icon-search icon-white"></i>Browse <b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a href="/A.users"><i class="icon-user"></i>All Users</a></li>
@@ -64,26 +67,17 @@ var act3 = ($cur == 'Mobile.htm.isp.js') ? 'active' : '';
                             </form>
                         </li>
                         <li class="divider-vertical"></li>
-                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Help
-                            <b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/getting_started.course"><i class="icon-plane"></i>Get Started</a></li>
-                                <li><a href="/80.file"><i class="icon-question-sign"></i>Frequently Asks</a></li>
-                                <li><a href="/81.file"><i class="icon-random"></i>Connect Us</a></li>
-                                <li><a href="/aboutus.classroom"><i class="icon-info-sign"></i>About Us</a></li>
-                            </ul>
-                        </li>
+                        <li><a href="/Help.htm"><i class="icon-info-sign icon-white"></i>Help</a></li>
                         <li class="{$act3$} visible-desktop"><a href="/Mobile.htm" title="Mobile"><i class="icon-mobile icon-white"></i></a></li>
                     </ul>
                     <ul class="pull-right nav" id="slf">
-                        <li class=""><a href="/" class="profile">
+                        <li class="visible-desktop"><a href="/" class="profile">
                             <img class="avatar" style="display: none;" /></a></li>
                         <li class=""><a href="/" class="profile name"><i class="icon-time icon-white"></i>loading...</a></li>
                         <li class="">
-                            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><b
+                            <li class="dropdown"><a href="#" class="dropdown-toggle  visible-desktop" data-toggle="dropdown"><b
                                 class="caret"></b></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="/" class="profile"><i class="icon-user"></i>Profile</a></li>
                                     <li><a href="/Auth/Logout?redirect=%20"><i class="icon-off"></i>Logout</a></li>
                                 </ul>
                             </li>

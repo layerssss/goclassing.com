@@ -51,7 +51,7 @@ $(function () {
                     },
                     dataType: 'json',
                     success: function (j) {
-                        $('#fb_btn').unbind('click').attr('href', j.url);
+                        $('#fb_btn,.profile.btn-navbar').unbind('click').attr('href', j.url);
                     }
                 });
             } else {
@@ -63,7 +63,7 @@ $(function () {
                 }
                 $('a.profile').attr('href', '/' + j.me.username + '.user');
                 $('#slf a.name').text(j.me.name);
-                $('#slf img.avatar').attr('src', j.me.avatarUrl).show();
+                $('img.avatar').attr('src', j.me.avatarUrl).show();
                 if (j.newFiles.length) {
                     if (typeof (showNewFiles) == 'function') {
                         showNewFiles(j.newFiles);
