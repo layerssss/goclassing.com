@@ -55,8 +55,8 @@ var act3 = ($cur == 'Mobile.htm.isp.js') ? 'active' : '';
                         <li class="dropdown {$act2$}"><a href="#" class="dropdown-toggle  visible-desktop" data-toggle="dropdown">
                             <i class="icon-search icon-white"></i>Browse <b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li><a href="/A.users"><i class="icon-user"></i>All Users</a></li>
-                                <li><a href="/A.courses"><i class="icon-book"></i>All Courses</a></li>
+                                <li><a href="/All.users"><i class="icon-user"></i>All Users</a></li>
+                                <li><a href="/All.courses"><i class="icon-book"></i>All Courses</a></li>
                                 <li><a href="/tags"><i class="icon-tags"></i>All Tags</a></li>
                             </ul>
                         </li>
