@@ -51,10 +51,7 @@ $(function () {
                     },
                     dataType: 'json',
                     success: function (j) {
-                        $('#fb_btn').click(function () {
-                            window.open(j.url, null, 'toolbars=no,left=' + (window.screenX + 100) + ',top=' + (window.screenY + 120) + ',width=' + ($(window).width() - 200) + ',height=500');
-                            return false;
-                        });
+                        $('#fb_btn').unbind('click').attr('href', j.url);
                     }
                 });
             } else {
@@ -76,7 +73,7 @@ $(function () {
                 }
                 $('[data-anticsrf]').each(function (i, e) {
                     var ac = $(e).attr('data-anticsrf');
-                    $(e).attr(ac, $(e).attr(ac).replace('ANTICSRF=','ANTICSRF='+ j.antiCSRF));
+                    $(e).attr(ac, $(e).attr(ac).replace('ANTICSRF=', 'ANTICSRF=' + j.antiCSRF));
                 });
             }
         }
