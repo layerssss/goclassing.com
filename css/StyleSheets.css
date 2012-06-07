@@ -67,7 +67,7 @@ section
 }
 .not.admin
 {
-    display:none;
+    display:none !important;
 }
 .loading
 {
