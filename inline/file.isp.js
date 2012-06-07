@@ -1,5 +1,36 @@
 ﻿/*<!--*/
 var f = file;
+var icon = {
+    'jpg': 'picture',
+    'jpeg': 'picture',
+    'bmp': 'picture',
+    'tif': 'picture',
+    'png': 'picture',
+    'rar': 'folder-close',
+    'zip': 'folder-close',
+    'gz': 'folder-close',
+    'tar': 'folder-close',
+    'pdf': 'file',
+    'doc': 'file',
+    'docx': 'file',
+    'pdf': 'file',
+    'xls': 'file',
+    'avi': 'film',
+    'mov': 'film',
+    'mpg': 'film',
+    'mp4': 'film',
+    'mpeg': 'film',
+    'wmv': 'film',
+    'rmvb': 'film',
+    'm4v': 'film',
+    'wav': 'headphones',
+    'mp3': 'headphones',
+    'm4a': 'headphones',
+    'ogg': 'headphones',
+    'wma': 'headphones'
+}[f.ext];
+//icons from http://twitter.github.com/bootstrap/base-css.html#icons
+icon = f.ext == '' ? 'comment' : (icon ? icon : 'file');
 /*-->
 
                 <div class="span6">

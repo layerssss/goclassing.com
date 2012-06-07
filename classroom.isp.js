@@ -48,24 +48,6 @@ $load("master/cframe.master.js")({
             <!--*/
             for (var j = 0; j < files.length; j++) {
                 var f = files[j];
-                var icon = {
-                    'jpg': 'picture',
-                    'jpeg': 'picture',
-                    'bmp': 'picture',
-                    'tif': 'picture',
-                    'png': 'picture',
-                    'rar': 'folder-close',
-                    'zip': 'folder-close',
-                    'gz': 'folder-close',
-                    'tar': 'folder-close',
-                    'pdf': 'file',
-                    'doc': 'file',
-                    'docx': 'file',
-                    'pdf': 'file',
-                    'xls': 'file'
-                }[f.ext];
-                //icons from http://twitter.github.com/bootstrap/base-css.html#icons
-                icon=icon?icon:'comment';
                 /*-->
             <div class="row-fluid file" style="position:relative;">
                 <!--*/$load('inline/file.isp.js')({file:f});/*-->
