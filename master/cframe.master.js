@@ -83,7 +83,7 @@ var act3 = ($cur == 'Mobile.htm.isp.js') ? 'active' : '';
 if (c.pub) { /*-->Plaza<!--*/ } else { /*-->Classroom<!--*/ } /*--></a></li>
                         <li class="divider-vertical"></li>
                         <li><a href="http://goclassing.com/"><span class="brand-gc-mini">Goclassing.com</span></a></li>
-                        <li class="{$act3$}"><a title="Mobile" href="/Mobile.htm"><i class="icon-mobile icon-white"></i></a></li>
+                        <li class="{$act3$} visible-desktop"><a title="Mobile" href="/Mobile.htm"><i class="icon-mobile icon-white"></i></a></li>
                     </ul>
                     <ul class="pull-right nav" id="slf">
                         <li class=""><a href="/" class="profile">

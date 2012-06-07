@@ -73,7 +73,7 @@ var act3 = ($cur == 'Mobile.htm.isp.js') ? 'active' : '';
                                 <li><a href="/aboutus.classroom"><i class="icon-info-sign"></i>About Us</a></li>
                             </ul>
                         </li>
-                        <li class="{$act3$}"><a href="/Mobile.htm" title="Mobile"><i class="icon-mobile icon-white"></i></a></li>
+                        <li class="{$act3$} visible-desktop"><a href="/Mobile.htm" title="Mobile"><i class="icon-mobile icon-white"></i></a></li>
                     </ul>
                     <ul class="pull-right nav" id="slf">
                         <li class=""><a href="/" class="profile">

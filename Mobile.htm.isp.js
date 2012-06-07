@@ -36,7 +36,7 @@ $load('master/frame.master.js')({
         </div></div>
     <div class="span8" style="">
         <div class="ipad visible-desktop">
-            <iframe src="http://goclassing.com"></iframe>
+            <iframe src="/"></iframe>
         </div>
     </div>
 </div>
