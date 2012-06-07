@@ -5,21 +5,9 @@ $load("master/cframe.master.js")({
     head: function () {
         /*-->
 <link href="css/ui-lightness/jquery-ui-1.8.18.custom.css" rel="stylesheet" type="text/css" />
-<script src="js/jquery-ui-1.8.18.custom.min.js" type="text/javascript"></script>
 <script src="js/jquery.masonry.min.js" type="text/javascript"></script>
 <script type="text/javascript">
     $(function () {
-        $('.types .file').sortable({
-            handle: '.btn-info',
-            start: function () {
-
-            },
-            stop: function () {
-                window.onresize();
-            },
-            helper: 'clone',
-            connectWith: '.types ol'
-        });
     });
     var admin = function () {
     };
