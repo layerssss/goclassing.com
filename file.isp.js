@@ -73,7 +73,7 @@ $load("master/cframe.master.js")({
         <div class=" well">
         <section id="Title">
         <h1 class="page-header">
-            {$c.title$}:{$f.title$}</h1>
+            {$c.title$}: {$f.title$}</h1>
             {$htmlEncode(f.desc)$}
             </section>
         <!--*/
