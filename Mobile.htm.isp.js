@@ -21,6 +21,11 @@ $load('master/frame.master.js')({
         width: 428px;
     }
 </style>
+<script type="text/javascript">
+    $(function () {
+        $('.ipad>iframe').attr('src', location.hash ? location.hash.substring(1) : '/');
+    });
+</script>
 <!--*/},
     body: function () {
         /*-->
@@ -36,7 +41,7 @@ $load('master/frame.master.js')({
         </div></div>
     <div class="span8" style="">
         <div class="ipad visible-desktop">
-            <iframe src="/"></iframe>
+            <iframe src="about:blank"></iframe>
         </div>
     </div>
 </div>

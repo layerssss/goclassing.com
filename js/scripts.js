@@ -19,6 +19,7 @@
 });
 var teacherUsername;
 $(function () {
+    $('.icon-mobile').closest('a').attr('href', '/Mobile.htm#' + location.href);
     $('.admin').toggleClass('not');
     $('[title]').tooltip({ placement: 'bottom' });
     $('textarea').keydown(function (e) {
