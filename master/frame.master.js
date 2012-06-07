@@ -46,6 +46,7 @@ var act2 = (($cur == 'users.isp.js') ||
 ($cur == 'user.isp.js') ||
 ($cur == 'course.isp.js') ||
 ($cur == 'tag.isp.js')) ? 'active' : $cur;
+var act3 = ($cur == 'Mobile.htm.isp.js') ? 'active' : '';
 /*-->
                         <li class="{$act1$}"><a href="/"><i class="icon-home icon-white"></i>Home</a></li>
                         <li class="dropdown {$act2$}"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -72,6 +73,7 @@ var act2 = (($cur == 'users.isp.js') ||
                                 <li><a href="/aboutus.classroom"><i class="icon-info-sign"></i>About Us</a></li>
                             </ul>
                         </li>
+                        <li class="{$act3$}"><a href="/Mobile.htm" title="Mobile"><i class="icon-mobile icon-white"></i></a></li>
                     </ul>
                     <ul class="pull-right nav" id="slf">
                         <li class=""><a href="/" class="profile">
@@ -99,6 +101,7 @@ arguments[0].body();
         <hr>
         <footer>
 <p>&copy; Goclassing.com 2012 <a href="/82.file">privacy</a>  
+<a href="/Mobile.htm">mobile</a>  
 <a href="https://github.com/layerssss/goclassing.com/blob/master/{$$cur$}" target="_blank">source</a></p>
 </footer>
     </div>
@@ -116,9 +119,6 @@ arguments[0].body();
         </div>
     </div>
     <div class="loading"></div>
-    <!-- Le javascript
-================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
     <script type="text/javascript" src="/js/bootstrap.min.js"></script>
     <script type="text/javascript">
     </script>

@@ -61,6 +61,8 @@ arguments[0].head();
 var act1 = ($cur == 'course.isp.js') ? 'active' : '';
 var act2 = (($cur == 'classroom.isp.js') ||
 ($cur == 'file.isp.js')) ? 'active' : $cur;
+
+var act3 = ($cur == 'Mobile.htm.isp.js') ? 'active' : '';
 /*-->
 </head>
 <body data-spy="scroll" data-target=".subnav">
@@ -81,6 +83,7 @@ var act2 = (($cur == 'classroom.isp.js') ||
 if (c.pub) { /*-->Plaza<!--*/ } else { /*-->Classroom<!--*/ } /*--></a></li>
                         <li class="divider-vertical"></li>
                         <li><a href="http://goclassing.com/"><span class="brand-gc-mini">Goclassing.com</span></a></li>
+                        <li class="{$act3$}"><a title="Mobile" href="/Mobile.htm"><i class="icon-mobile icon-white"></i></a></li>
                     </ul>
                     <ul class="pull-right nav" id="slf">
                         <li class=""><a href="/" class="profile">
@@ -108,7 +111,7 @@ arguments[0].body();
         <hr>
         <footer>
 <p>&copy; Goclassing.com 2012 <a href="/82.file">privacy</a>
-
+<a href="/Mobile.htm">mobile</a>  
 <a href="https://github.com/layerssss/goclassing.com/blob/master/{$$cur$}" target="_blank">source</a></p>
 </footer>
     </div>
