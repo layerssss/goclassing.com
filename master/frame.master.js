@@ -67,7 +67,7 @@ var act3 = ($cur == 'Mobile.htm.isp.js') ? 'active' : '';
                             </form>
                         </li>
                         <li class="divider-vertical"></li>
-                        <li><a href="/Help.htm"><i class="icon-info-sign icon-white"></i>Help</a></li>
+                        <li><a href="/getting_started.course"><i class="icon-info-sign icon-white"></i>Help</a></li>
                         <li class="{$act3$} visible-desktop"><a href="/Mobile.htm" title="Mobile"><i class="icon-mobile icon-white"></i></a></li>
                     </ul>
                     <ul class="pull-right nav" id="slf">
