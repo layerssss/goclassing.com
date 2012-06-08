@@ -74,7 +74,7 @@ var act3 = ($cur == 'Mobile.htm.isp.js') ? 'active' : '';
                 <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span
                     class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                 </a>
-                <a class="btn btn-navbar profile" href="/">
+                <a class="btn btn-navbar profile hidden-desktop" href="/">
                             <img class="avatar" src="/img/signin.png"  alt="Sign in" /></a>
                 <a class="brand" href="/{$c.id$}.course">
                     <img src="{$c.img$}" style="width: 35px; height: 35px; position: absolute; left: 2px;

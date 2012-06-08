@@ -38,7 +38,7 @@ arguments[0].head(); /*-->
                 <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span
                     class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                 </a>
-                <a class="btn btn-navbar profile" href="/">
+                <a class="btn btn-navbar profile hidden-desktop" href="/">
                             <img class="avatar" src="/img/signin.png" alt="Sign in" /></a>
                 <a class="brand brand-gc" href="/">Goclassing</a>
                 <div class="nav-collapse">
