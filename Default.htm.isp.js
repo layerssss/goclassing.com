@@ -86,7 +86,7 @@ $load('master/frame.master.js')({
             }
             /*-->
             <li class="span1"><a style="background-color:#{$c.color$};" class="thumbnail course" href="{$c.id$}.course" title="{$c.title$}">
-                <img src="{$c.img$}" style="width: 100%; max-width: 100px;" />
+                <img src="{$c.img$}" alt="c.title" style="width: 100%; max-width: 100px;" />
             </a>
                 <div class="des-course alert alert-info" style="display: none;">
                     <a class="close" data-dismiss="alert">×</a>
@@ -100,7 +100,7 @@ $load('master/frame.master.js')({
             /*-->
             <li class="span1"><a class="thumbnail" href="#" onclick="$('.create-course-btn').trigger('click');return false;"
                 title="Take over here!">
-                <img src="/img/blank.gif" style="width: 100%; max-width: 100px;" />
+                <img src="/img/blank.gif" alt="Take over here!" style="width: 100%; max-width: 100px;" />
             </a></li>
             <!--*/
         }
