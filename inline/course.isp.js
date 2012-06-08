@@ -4,7 +4,7 @@ var c = arguments[0].course;
 <div class="row-fluid">
                         <div class="span2">
                             <a class="thumbnail" style="background-color:#{$c.color$};" href="{$c.id$}.course" title="{$c.title$}">
-                                <img src="{$c.img$}" style="width: 100%; max-width: 70px;" />
+                                <img src="{$c.img$}" alt="{$c.title$}" style="width: 100%; max-width: 70px;" />
                             </a>
                         </div>
                         <div class="span6" style="overflow:hidden;height:75px;">
@@ -23,7 +23,7 @@ var c = arguments[0].course;
                             <a href="{$c.id$}.course" class="btn btn-info"><i class="icon-search icon-white">
                             </i>Visit</a>
                             <!--*/if(!c.pub){/*-->
-                            <a href="/Course/Join?id={$c.id$}&ANTICSRF=&redirect=%20" data-anticsrf="href" class="btn btn-success"><i class="icon-plus icon-white">
+                            <a href="/Course/Join?id={$c.id$}&amp;ANTICSRF=&amp;redirect=%20" data-anticsrf="href" class="btn btn-success"><i class="icon-plus icon-white">
                             </i>Join</a> 
                             <!--*/}else{/*-->
                             <a class="btn btn-success disabled" href="#" onclick="return false;"
