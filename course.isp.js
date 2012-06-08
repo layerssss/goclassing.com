@@ -23,8 +23,8 @@ $load("master/cframe.master.js")({
                 <!--*/if(!c.pub){/*-->
                 <li class="not admin" style="float: right;">
                     <div>
-                        <a class="btn btn-success" href="/Course/Join?ANTICSRF=&redirect=%20&id={$c.id$}" data-anticsrf="href"><i class="icon-plus-sign icon-white">
-                        </i>Join</a> <a class="btn btn-danger" href="/Course/Exit?ANTICSRF=&redirect=%20&id={$c.id$}" data-anticsrf="href">
+                        <a class="btn btn-success" href="/Course/Join?ANTICSRF=&amp;redirect=%20&amp;id={$c.id$}" data-anticsrf="href"><i class="icon-plus-sign icon-white">
+                        </i>Join</a> <a class="btn btn-danger" href="/Course/Exit?ANTICSRF=&amp;redirect=%20&amp;id={$c.id$}" data-anticsrf="href">
                             <i class="icon-remove-sign icon-white"></i>Exit</a></div>
                 </li>
                 <!--*/}else{/*-->
@@ -83,8 +83,8 @@ $load("master/cframe.master.js")({
         <div class="row-fluid">
         <div class="span10"><!--*/
         $load('inline/user.isp.js')({user:joinings[i]});/*--></div>
-        <div class="span2 admin"><a href="Course/Aproove?id={$urlEncode(c.id)$}&uid={$joinings[i].id$}&ANTICSRF=&redirect=%20" data-anticsrf="href" class="btn btn-success btn-mini"><i class="icon-ok icon-white"></i></a>
-                    <a title="Reject" data-confirm="Are you sure?" href="Course/Disaproove?id={$urlEncode(c.id)$}&uid={$joinings[i].id$}&ANTICSRF=&redirect=%20" data-anticsrf="href" class="btn btn-danger btn-mini" style="margin-right:5px;"><i class="icon-remove icon-white"></i></a>
+        <div class="span2 admin"><a href="Course/Aproove?id={$urlEncode(c.id)$}&amp;uid={$joinings[i].id$}&amp;ANTICSRF=&amp;redirect=%20" data-anticsrf="href" class="btn btn-success btn-mini"><i class="icon-ok icon-white"></i></a>
+                    <a title="Reject" data-confirm="Are you sure?" href="Course/Disaproove?id={$urlEncode(c.id)$}&amp;uid={$joinings[i].id$}&amp;ANTICSRF=&amp;redirect=%20" data-anticsrf="href" class="btn btn-danger btn-mini" style="margin-right:5px;"><i class="icon-remove icon-white"></i></a>
                     </div>
         </div>
             
@@ -100,7 +100,7 @@ $load("master/cframe.master.js")({
         <div class="span10"><!--*/
         $load('inline/user.isp.js')({user:learnings[i]});/*--></div>
         <div class="span2 admin">
-                    <a title="Remove" data-confirm="Are you sure?" href="Course/Disaproove?id={$urlEncode(c.id)$}&uid={$learnings[i].id$}&ANTICSRF=&redirect=%20" data-anticsrf="href" class="btn btn-danger btn-mini" style="margin-right:5px;"><i class="icon-remove icon-white"></i></a>
+                    <a title="Remove" data-confirm="Are you sure?" href="Course/Disaproove?id={$urlEncode(c.id)$}&amp;uid={$learnings[i].id$}&amp;ANTICSRF=&amp;redirect=%20" data-anticsrf="href" class="btn btn-danger btn-mini" style="margin-right:5px;"><i class="icon-remove icon-white"></i></a>
                     </div>
         </div></li>
         <!--*/
@@ -112,9 +112,9 @@ $load("master/cframe.master.js")({
     <a class="btn btn-info admin visible-phone" data-toggle="button" href="#" onclick="$('.intro').toggle();return false;">
         <i class="icon-edit icon-white"></i>Edit</a>
     <!--*/if(!c.pub){/*-->
-    <a class="btn btn-success not admin visible-phone" href="/Course/Join?ANTICSRF=&redirect=%20&id={$c.id$}" data-anticsrf="href">
+    <a class="btn btn-success not admin visible-phone" href="/Course/Join?ANTICSRF=&amp;redirect=&amp;id={$c.id$}" data-anticsrf="href">
         <i class="icon-plus-sign icon-white"></i>Join</a> <a class="btn btn-danger not admin visible-phone"
-            href="/Course/Exit?ANTICSRF=&redirect=%20&id={$c.id$}" data-anticsrf="href"><i class="icon-remove-sign icon-white">
+            href="/Course/Exit?ANTICSRF=&amp;redirect=&amp;id={$c.id$}" data-anticsrf="href"><i class="icon-remove-sign icon-white">
             </i>Exit</a>
     <!--*/}else{/*-->
     <a class="btn btn-success disabled not admin visible-phone" href="#" onclick="return false;"
@@ -143,7 +143,7 @@ $load("master/cframe.master.js")({
     </div>
     <section class="intro span10" style="display: none;">
     
-    <form class="well form-horizontal" action="/Course/Edit?ANTICSRF=&redirect=%20" data-anticsrf="action" enctype="multipart/form-data" 
+    <form class="well form-horizontal" action="/Course/Edit?ANTICSRF=&amp;redirect=" data-anticsrf="action" enctype="multipart/form-data" 
     method="post">
     <fieldset>
         <legend>Edit Course Info</legend>
@@ -251,7 +251,7 @@ $load("master/cframe.master.js")({
                 Save (Ctrl + Enter)</button>
             <button type="button" onclick="$('.btn-info:visible').trigger('click');" class="btn">
                 Cancel</button>
-            <a href="/Course/Delete?id={$c.id$}&redirect={$urlEncode('/')$}&ANTICSRF=" class="btn btn-danger" data-confirm="All topics, students in this course will also be DELETED, are you sure?" data-anticsrf="href" >
+            <a href="/Course/Delete?id={$c.id$}&amp;redirect={$urlEncode('/')$}&amp;ANTICSRF=" class="btn btn-danger" data-confirm="All topics, students in this course will also be DELETED, are you sure?" data-anticsrf="href" >
                 Delete</a>
         </div>
     </fieldset>
