@@ -76,13 +76,11 @@ var act3 = ($cur == 'Mobile.htm.isp.js') ? 'active' : '';
                         <li class="visible-desktop"><a href="/" class="profile">
                             <img class="avatar" style="display: none;" /></a></li>
                         <li class=""><a href="/" class="profile name"><i class="icon-time icon-white"></i>loading...</a></li>
-                        <li class="">
-                            <li class="dropdown"><a href="#" class="dropdown-toggle  visible-desktop" data-toggle="dropdown"><b
-                                class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="/Auth/Logout?redirect=%20"><i class="icon-off"></i>Logout</a></li>
-                                </ul>
-                            </li>
+                        <li class="dropdown"><a href="#" class="dropdown-toggle  visible-desktop" data-toggle="dropdown"><b
+                            class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/Auth/Logout?redirect=%20"><i class="icon-off"></i>Logout</a></li>
+                            </ul>
                         </li>
                         <li class="offline"><a href="#" id="fb_btn"><span>Sign in with Facebook</span></a></li>
                     </ul>
