@@ -78,7 +78,7 @@ var act3 = ($cur == 'Mobile.htm.isp.js') ? 'active' : '';
                             <img class="avatar" src="/img/signin.png"  alt="Sign in" /></a>
                 <a class="brand" href="/{$c.id$}.course">
                     <img src="{$c.img$}" style="width: 35px; height: 35px; position: absolute; left: 2px;
-                        top: 2px;" />
+                        top: 2px;" alt="" />
                     <span style="margin-left: 40px;">{$c.title$}</span></a>
                 <div class="nav-collapse">
                     <ul class="nav">
