@@ -53,7 +53,7 @@ $load("master/cframe.master.js")({
 <div class="row">
     <!--*/
         if (f.ext.length) {/*-->
-    <a href="Course/OpenFile?id={$f.id$}" target="_blank" class="btn btn-primary visible-phone">
+    <a href="Course/OpenFile?id={$f.id$}&amp;ANTICSRF=" data-anticsrf="href"  target="_blank" class="btn btn-primary visible-phone">
         <i class="icon-file icon-white"></i>Open '{$f.title$}.{$f.ext$}'</a>
     <!--*/
         } /*-->
