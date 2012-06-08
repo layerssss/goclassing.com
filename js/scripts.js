@@ -33,7 +33,7 @@ $(function () {
     $.ajax({
         url: '/Auth/GetStatus',
         cache: false,
-        dataType: 'jsonp',
+        dataType: 'json',
         success: function (j) {
             if (j.message) {
                 $('#myModal .modal-body').text(String(j.message));
