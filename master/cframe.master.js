@@ -37,6 +37,7 @@ if (typeof (arguments[0].title) == 'string') {
     <link href="/js/fancyBox/helpers/jquery.fancybox-thumbs.css" rel="stylesheet" type="text/css" />
     <script src="/js/fancyBox/jquery.mousewheel-3.0.6.pack.js" type="text/javascript"></script>
     <script src="/js/jquery.backstretch.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
     <script src="/js/scripts.js" type="text/javascript"></script>
     <script type="text/javascript">
         teacherUsername = "{$c.user.username$}";
@@ -148,9 +149,6 @@ arguments[0].body();
     <!-- Le javascript
 ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-    </script>
     <!--*/
 $load('inline/ga.isp.js')(); /*-->
 </body>
