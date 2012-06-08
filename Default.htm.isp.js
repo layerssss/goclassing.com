@@ -81,9 +81,6 @@ $load('master/frame.master.js')({
         var i = 0;
         for (i = 0; i < courses.length; i++) {
             var c = courses[i];
-            if (c == null) {
-                $('null');
-            }
             /*-->
             <li class="span1"><a style="background-color:#{$c.color$};" class="thumbnail course" href="{$c.id$}.course" title="{$c.title$}">
                 <img src="{$c.img$}" alt="{$c.title$}" style="width: 100%; max-width: 100px;" />
