@@ -75,7 +75,7 @@ var act3 = ($cur == 'Mobile.htm.isp.js') ? 'active' : '';
                     class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                 </a>
                 <a class="btn btn-navbar profile" href="/">
-                            <img class="avatar" src="/img/signin.png" /></a>
+                            <img class="avatar" src="/img/signin.png"  alt="Sign in" /></a>
                 <a class="brand" href="/{$c.id$}.course">
                     <img src="{$c.img$}" style="width: 35px; height: 35px; position: absolute; left: 2px;
                         top: 2px;" />
@@ -92,7 +92,7 @@ if (c.pub) { /*-->Plaza<!--*/ } else { /*-->Classroom<!--*/ } /*--></a></li>
                     </ul>
                     <ul class="pull-right nav" id="slf">
                         <li class="visible-desktop"><a href="/" class="profile">
-                            <img class="avatar" /></a></li>
+                            <img class="avatar" src="/img/signin.png" style="display: none;" alt=""  /></a></li>
                         <li class=""><a href="/" class="profile name"><i class="icon-time icon-white"></i>loading...</a></li>
                         <li class="dropdown"><a href="#" class="dropdown-toggle visible-desktop" data-toggle="dropdown"><b
                             class="caret"></b></a>
