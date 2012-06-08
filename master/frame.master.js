@@ -39,7 +39,7 @@ arguments[0].head(); /*-->
                     class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                 </a>
                 <a class="btn btn-navbar profile" href="/">
-                            <img class="avatar" src="/img/signin.png" /></a>
+                            <img class="avatar" src="/img/signin.png" alt="Sign in" /></a>
                 <a class="brand brand-gc" href="/">Goclassing</a>
                 <div class="nav-collapse">
                     <ul class="nav">
@@ -74,7 +74,7 @@ var act3 = ($cur == 'Mobile.htm.isp.js') ? 'active' : '';
                     </ul>
                     <ul class="pull-right nav" id="slf">
                         <li class="visible-desktop"><a href="/" class="profile">
-                            <img class="avatar" style="display: none;" /></a></li>
+                            <img class="avatar" src="/img/signin.png" style="display: none;" alt="" /></a></li>
                         <li class=""><a href="/" class="profile name"><i class="icon-time icon-white"></i>loading...</a></li>
                         <li class="dropdown"><a href="#" class="dropdown-toggle  visible-desktop" data-toggle="dropdown"><b
                             class="caret"></b></a>
